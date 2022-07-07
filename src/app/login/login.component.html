@@ -1,1 +1,105 @@
-<p>login works!</p>
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img [src]="image" alt="">
+      </div>
+      <div class="back">
+        <img [src]="image" alt="">
+      </div>
+    </div>
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Login</div>
+          <div style="margin-top: 5px;" class="alert alert-primary" role="alert" *ngIf="showSucssMessage">
+            send sucssecfuly
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="showErrorMessage">
+            error of email or password
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+            <div class="input-boxes">
+              <div *ngIf="!loginForm.controls.email?.valid &&
+             (loginForm.controls.email?.dirty || loginForm.controls.email?.touched)" style="color: red">
+                Invalid email
+              </div>
+              <div class="input-box">
+                <i style="padding-left: 2px;" class="fa fa-envelope"></i>
+                <input type="text" class="form-control" name="email" placeholder="Enter your email"
+                  formControlName="email"  />
+              </div>
+              <div *ngIf="!loginForm.controls.password?.valid &&
+            (loginForm.controls.password?.dirty || loginForm.controls.password?.touched)" style="color: red">
+                Put the correct password
+              </div>
+              <div class="input-box">
+                <i style="padding-left: 2px;" class=" fa fa-lock"></i>
+                <input type="password" class="form-control" name="password" placeholder="Enter your Password"
+                  formControlName="password" id="myInput" />
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label class="lab-signup" for="flip">Sigup
+                  now</label></div>
+            </div>
+          </form>
+        </div>
+        <div class="signup-form">
+          <div class="title">Signup</div>
+          <div style="margin-top: 5px;" class="alert alert-primary" role="alert" *ngIf="showSucssMessage">
+            send sucssecfuly
+          </div>
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="input-boxes">
+              <div *ngIf="!signupForm.controls.username?.valid &&
+              (signupForm.controls.username?.dirty || signupForm.controls.username?.touched)" style="color: red">
+              Enter a name consisting of 2 letters or more
+             </div>
+              <div class="input-box">
+                <i class="fa fa-user"></i>
+                <input type="text" class="form-control" name="username"  placeholder="Enter your username"
+                formControlName="username"/>
+              </div>
+              <div *ngIf="!signupForm.controls.email?.valid &&
+              (signupForm.controls.email?.dirty || signupForm.controls.email?.touched)" style="color: red">
+              The email must be from @gmail
+             </div>
+              <div class="input-box">
+                <i class="fa fa-envelope"></i>
+                <input type="email" class="form-control" name="email"  placeholder="Enter your email"
+                formControlName="email"/>
+              </div>
+              <div *ngIf="!signupForm.controls.password?.valid &&
+              (signupForm.controls.password?.dirty || signupForm.controls.password?.touched)" style="color: red">
+              Enter more than 7 letters and numbers
+             </div>
+              <div class="input-box">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control" name="password"  placeholder="Enter your Password"
+                formControlName="password"/>
+              </div>
+              <div *ngIf="!signupForm.controls.phone?.valid &&
+              (signupForm.controls.phone?.dirty || signupForm.controls.phone?.touched)" style="color: red">
+              Enter a 10-digit phone number
+             </div>
+              <div class="input-box">
+                <i class="fa fa-phone"></i>
+                <input type="tel" class="form-control"  name="phone" placeholder="054-455-8952" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+                formControlName="phone"/>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
