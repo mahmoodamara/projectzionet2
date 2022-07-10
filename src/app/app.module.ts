@@ -12,6 +12,7 @@ import { MessageComponent } from './admin/message/message.component';
 import { BodyComponent } from './admin/body/body.component';
 import { ProductsComponent } from './admin/products/products.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     BodyComponent,
     ProductsComponent,
     ProductFormComponent,
+    HomeComponent,
 
   ],
   imports: [
