@@ -1,0 +1,62 @@
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img [src]="image" alt="">
+      </div>
+      <div class="back">
+        <img [src]="image" alt="">
+      </div>
+    </div>
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Login</div>
+          <div style="margin-top: 5px;" class="alert alert-primary" role="alert" *ngIf="showSucssMessage">
+            send sucssecfuly
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="showErrorMessage">
+            error of email or password
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+            <div class="input-boxes">
+              <div *ngIf="!loginForm.controls.email?.valid &&
+             (loginForm.controls.email?.dirty || loginForm.controls.email?.touched)" style="color: red">
+                Invalid email
+              </div>
+              <div class="input-box">
+                <i style="padding-left: 2px;" class="fa fa-envelope"></i>
+                <input type="text" class="form-control" name="email" placeholder="Enter your email"
+                  formControlName="email"  />
+              </div>
+              <div *ngIf="!loginForm.controls.password?.valid &&
+            (loginForm.controls.password?.dirty || loginForm.controls.password?.touched)" style="color: red">
+                Put the correct password
+              </div>
+              <div class="input-box">
+                <i style="padding-left: 2px;" class=" fa fa-lock"></i>
+                <input type="password" class="form-control" name="password" placeholder="Enter your Password"
+                  formControlName="password" id="myInput" />
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label class="lab-signup" for="flip">Sigup
+                  now</label></div>
+            </div>
+          </form>
+        </div>
+        <div class="signup-form">
+          <div class="title">Signup</div>
+          <div style="margin-top: 5px;" class="alert alert-primary" role="alert" *ngIf="showSucssMessage">
+            send sucssecfuly
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>

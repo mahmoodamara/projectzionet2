@@ -1,0 +1,12 @@
+#message{
+  width: 100%;
+  padding: 20px 220px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 458px) {
+
+  #message{
+  margin-bottom: 100%;
+  }
+}
