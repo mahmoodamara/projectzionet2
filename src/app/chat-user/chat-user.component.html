@@ -38,49 +38,34 @@
                                       </div>
                                   </div>
                               </div>
-                              <ul class="users">
-                                <a>
-                                  <li  class="person" data-chat="person1" *ngFor="let user of message " (click)="getUserMessage(user)" >
-
-                                      <div class="user">
-                                          <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
-                                          <span class="status busy"></span>
-                                      </div>
-                                      <p class="name-time" >
-                                          <span class="name" >{{user.userName }}</span>
-                                          <span class="time">15/02/2019</span>
-                                      </p>
-                                  </li>
-                                </a>
-                              </ul>
                           </div>
                       </div>
                       <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
                           <div class="selected-user">
-                              <span>To: <span class="name">{{userActiv}}</span></span>
+                              <span>To: <span class="name">{{userActiv[0].username}}</span></span>
                           </div>
                           <div class="chat-container" >
                               <ul class="chat-box chatContainerScroll" *ngFor="let mess of messageUser">
-                                  <li class="chat-left " *ngIf="mess.userMessage.length>0">
-                                      <div class="chat-avatar">
-                                          <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
-                                          <div class="chat-name">{{mess.userName}}</div>
-                                      </div>
-                                      <div class="chat-text">{{mess.userMessage}}</div>
-                                      <div class="chat-hour">{{mess.time}} <span class="fa fa-check-circle"></span></div>
-                                  </li>
-                                  <li class="chat-right" *ngIf="mess.adminMessage.length>0">
-                                      <div class="chat-hour">08:56 <span class="fa fa-check-circle"></span></div>
-                                      <div class="chat-text" >{{mess.adminMessage}}</div>
+                                  <li class="chat-left " *ngIf="mess.adminMessage.length>0">
                                       <div class="chat-avatar">
                                           <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
                                           <div class="chat-name">{{mess.adminName}}</div>
+                                      </div>
+                                      <div class="chat-text">{{mess.adminMessage}}</div>
+                                      <div class="chat-hour">{{mess.time}} <span class="fa fa-check-circle"></span></div>
+                                  </li>
+                                  <li class="chat-right" *ngIf="mess.userMessage.length>0">
+                                      <div class="chat-hour">08:56 <span class="fa fa-check-circle"></span></div>
+                                      <div class="chat-text" >{{mess.userMessage}}</div>
+                                      <div class="chat-avatar">
+                                          <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
+                                          <div  class="chat-name">{{mess.userName}}</div>
                                       </div>
                                   </li>
 
                               </ul>
                               <div class="form-group mt-3 mb-0">
-                                  <textarea  [(ngModel)]="userMessages.adminMessage" class="form-control" rows="3" placeholder="Type your message here..."></textarea>
+                                  <textarea  [(ngModel)]="userMessages.userMessage" class="form-control" rows="3" placeholder="Type your message here..."></textarea>
                               </div>
                               <div>
                                 <button (click)="postMessage()">send message</button>

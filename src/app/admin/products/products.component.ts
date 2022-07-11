@@ -8,13 +8,19 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
+  products :Product[]=[];
   constructor(private productservice : ProductsService) { }
 
   ngOnInit(): void {
-
+    this.getProducts();
   }
-  addToForm(product:any){
+getProducts(){
+  this.productservice.getProduct().subscribe(res=>{
+    this.products=res;
+  })
+}
+
+  addToForm(product:Product){
     this.productservice.products.push(product);
   }
 

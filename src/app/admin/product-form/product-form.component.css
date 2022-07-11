@@ -1,12 +1,8 @@
-/* Google Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-body{
-
+.product-form{
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -14,208 +10,139 @@ body{
   background: url("/assets/images/loginback5.jpg") top center no-repeat;
   padding: 30px;
 }
-.container{
-  position: relative;
-  max-width: 850px;
-  width: 100%;
-  background: #fff;
-  padding: 40px 30px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  perspective: 2700px;
-  border-radius: 8px;
-
-}
-.container .cover{
+.content{
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  height: 100%;
-  width: 50%;
-  z-index: 98;
-  transition: all 1s ease;
-  transform-origin: left;
-  transform-style: preserve-3d;
-
-}
-.container #flip:checked ~ .cover{
-  transform: rotateY(-180deg);
-}
- .container .cover .front,
- .container .cover .back{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.cover .back{
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-}
-.container .cover::before,
-.container .cover::after{
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background:none;
-  opacity: 0.5;
-  z-index: 12;
-}
-.container .cover::after{
-  opacity: 0.3;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-}
-.container .cover img{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 10;
-  border-radius: 8px;
-}
-.container .cover .text{
-  position: absolute;
-  z-index: 130;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.cover .text .text-1,
-.cover .text .text-2{
-  font-size: 26px;
-  font-weight: 600;
-  color: #fff;
+  margin-top: 50px;
   text-align: center;
+  padding: 60px 32px;
+  width: 600px;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,0.04);
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
 }
-.cover .text .text-2{
-  font-size: 15px;
-  font-weight: 500;
+.content header{
+  color: white;
+  font-size: 33px;
+  font-weight: 600;
+  margin: 0 0 35px 0;
+  font-family: 'Montserrat',sans-serif;
 }
-.container .forms{
+.field{
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: rgba(255,255,255,0.94);
+}
+.field span{
+  color: #222;
+  width: 40px;
+  line-height: 45px;
+}
+.field input{
   height: 100%;
   width: 100%;
-  background: #fff;
-}
-.container .form-content{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.form-content .login-form,
-.form-content .signup-form{
-  width: calc(100% / 2 - 25px);
-}
-.forms .form-content .title{
-  position: relative;
-  font-size: 24px;
-  font-weight: 500;
-  color: #333;
-}
-.forms .form-content .title:before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 25px;
-  background: #0e0e0e;
-}
-.forms .signup-form  .title:before{
-  width: 20px;
-}
-.forms .form-content .input-boxes{
-  margin-top: 30px;
-}
-.forms .form-content .input-box{
-  display: flex;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-  margin: 10px 0;
-  position: relative;
-}
-.form-content .input-box input{
-  height: 100%;
-  width: 100%;
-  outline: none;
+  background: transparent;
   border: none;
-  padding: 0 30px;
+  outline: none;
+  color: #222;
   font-size: 16px;
-  font-weight: 500;
-  border-bottom: 2px solid rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+  font-family: 'Poppins',sans-serif;
 }
-.form-content .input-box input:focus,
-.form-content .input-box input:valid{
-  border-color: #0e0e0e;
+.space{
+  margin-top: 16px;
 }
-.form-content .input-box i{
+.show{
   position: absolute;
-  color: #0e0e0e;
+  right: 13px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  display: none;
+  cursor: pointer;
+  font-family: 'Montserrat',sans-serif;
+}
+.pass-key:valid ~ .show{
+  display: block;
+}
+.pass{
+  text-align: left;
+  margin: 10px 0;
+}
+.pass a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+}
+.pass:hover a{
+  text-decoration: underline;
+}
+.field input[type="submit"]{
+  background: #3498db;
+  border: 1px solid #2691d9;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat',sans-serif;
+}
+.field input[type="submit"]:hover{
+  background: #2691d9;
+}
+.login{
+  color: white;
+  margin: 20px 0;
+  font-family: 'Poppins',sans-serif;
+}
+.links{
+  display: flex;
+  cursor: pointer;
+  color: white;
+  margin: 0 0 20px 0;
+}
+.facebook,.instagram{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  margin-left: 10px;
+}
+.facebook{
+  margin-left: 0;
+  background: #4267B2;
+  border: 1px solid #3e61a8;
+}
+.instagram{
+  background: #E1306C;
+  border: 1px solid #df2060;
+}
+.facebook:hover{
+  background: #3e61a8;
+}
+.instagram:hover{
+  background: #df2060;
+}
+.links i{
   font-size: 17px;
 }
-.forms .form-content .text{
-  font-size: 14px;
+i span{
+  margin-left: 8px;
   font-weight: 500;
-  color: #333;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: 'Poppins',sans-serif;
 }
-.forms .form-content .text a{
+.signup{
+  font-size: 15px;
+  color: white;
+  font-family: 'Poppins',sans-serif;
+}
+.signup a{
+  color: #3498db;
   text-decoration: none;
-  color: blue;
 }
-.forms .form-content .text a:hover{
+.signup a:hover{
   text-decoration: underline;
-}
-.forms .form-content .button{
-  color: #fff;
-  margin-top: 40px;
-}
-.forms .form-content .button input{
-  color: #fff;
-  background: #0e0e0e;
-  border-radius: 6px;
-  padding: 0;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-.forms .form-content .button input:hover{
-  background: #313132;
-}
-.forms .form-content label{
-  color: #1f07d4;
-  cursor: pointer;
-}
-.forms .form-content label:hover{
-  text-decoration: underline;
-}
-.forms .form-content .login-text,
-.forms .form-content .sign-up-text{
-  text-align: center;
-  margin-top: 25px;
-}
-.container #flip{
-  display: none;
-}
-@media (max-width: 730px) {
-  .container .cover{
-    display: none;
-  }
-  .form-content .login-form,
-  .form-content .signup-form{
-    width: 100%;
-  }
-  .form-content .signup-form{
-    display: none;
-  }
-  .container #flip:checked ~ .forms .signup-form{
-    display: block;
-  }
-  .container #flip:checked ~ .forms .login-form{
-    display: none;
-  }
 }

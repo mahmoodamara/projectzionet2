@@ -12,6 +12,7 @@ import { MessageComponent } from './admin/message/message.component';
 import { BodyComponent } from './admin/body/body.component';
 import { ProductsComponent } from './admin/products/products.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { ChatUserComponent } from './chat-user/chat-user.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     BodyComponent,
     ProductsComponent,
     ProductFormComponent,
+    ChatUserComponent,
 
   ],
   imports: [

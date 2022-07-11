@@ -6,6 +6,7 @@ import { MessageComponent } from './admin/message/message.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { ProductsComponent } from './admin/products/products.component';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { ChatUserComponent } from './chat-user/chat-user.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {path:'body',component:BodyComponent},
   {path:'adminProducts',component:ProductsComponent},
   {path:'productForm',component:ProductFormComponent},
+  {path:'messages',component:MessageComponent},
+  {path:'chat-user',component:ChatUserComponent},
+
+
 
 
 

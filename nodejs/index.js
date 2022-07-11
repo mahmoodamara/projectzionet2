@@ -9,8 +9,13 @@ app.use(cors({ origin: 'http://localhost:4200' }));
 
 
 var userControllers = require('./controllers/userControllers');
+var productControllers = require('./controllers/productControllers');
+var messageControllers = require('./controllers/messageControllrers');
 
 
 app.listen(PORT, () => console.log('Server started at port : '+PORT));
 
 app.use('/api', userControllers);
+app.use('/api', productControllers);
+app.use('/api', messageControllers);
+
