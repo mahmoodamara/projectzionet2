@@ -13,6 +13,8 @@ import { BodyComponent } from './admin/body/body.component';
 import { ProductsComponent } from './admin/products/products.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { HomeComponent } from './home/home.component';
+import { PrevDirective } from './prev.directive';
+import { NextDirective } from './next.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { HomeComponent } from './home/home.component';
     ProductsComponent,
     ProductFormComponent,
     HomeComponent,
+    PrevDirective,
+    NextDirective,
 
   ],
   imports: [

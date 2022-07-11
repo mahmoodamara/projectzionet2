@@ -1,116 +1,338 @@
-
-<header>
-    <!-- Background image -->
-    <div id="intro" class="bg-image shadow-2-strong">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-        <div class="container d-flex align-items-center justify-content-center text-center h-100">
-          <div class="text-white">
-            <h1 class="mb-3">Hello Welcome To Our Store</h1>
-            <h5 class="mb-4">So many books, so little time</h5>
-            <a class="btn btn-outline-light btn-lg m-2" routerLink="/product" role="button" 
-              rel="nofollow"  target="_blank">Shop Now</a>
-            <a class="btn btn-outline-light btn-lg m-2" routerLink="/school" target="_blank"
-              role="button" >Offer of the Week</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Background image -->
-  </header>
-  <!--Main Navigation-->
-
-  <!--Main layout-->
-  <main class="mt-5">
-    <div class="container">
-      <!--Section: Content-->
-      <section>
-        <div class="row">
-          <div class="col-md-6 gx-5 mb-4">
-            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
-              <img src="../../assets/images/woman-6784555.jpg" class="img-fluid" />
-              <a href="#!">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 gx-5 mb-4">
-            <h4><strong></strong></h4>
-            <p><strong>Where we stand today?
-            </strong></p>
-            <p class="text-muted">
-              
-              Our in-store events feature some of today’s most interesting and provocative personalities, from Lin Manuel Miranda to Patti Smith and dialogues between such greats as Ocean Vuong and Jaqueline Woodson. If you are looking for a relaxed, intimate evening where you’ll be both engaged and entertained, we have the programming for you.            </p>
-            <p><strong>Where we’re going: Driven by You</strong></p>
-            <p class="text-muted">
-              In all seriousness, at the BookShop, you, our book lovers, are our number one priority. As we change and grow with the times, we will never lose sight of our roots – we are a community bookstore first and foremost. We are forever invested in you and want to make your shopping experience with us a memorable, enjoyable, and easy one. A Strand is a place where books are loved and book lovers of all kinds are always welcome.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!--Section: Content-->
-
-      <hr class="my-5" />
-
-      <!--Section: Content-->
-      <!-- <section class="text-center">
-        <h4 class="mb-5"><strong>10% off Books of the Month</strong></h4>
-        <div class="row" >
-          <div class="col-lg-2 col-md-12 mb-4" *ngFor="let i of offer1">
-           
-        <div class="hero-container">
-          <div class="main-container">
-            <div class="poster-container">
-              <a href="#"><img src="{{i.img}}" class="poster" /></a>
-            </div>
-            <div class="ticket-container">
-              <div class="ticket__content">
-                <h4 class="ticket__movie-title">{{i.name}}</h4>
-                <p class="ticket__movie-slogan">
-                  {{i.writer}}
-                </p>
-                <p class="ticket__current-price">{{ i.price | currency:"ILS"}}</p>
-                <p class="ticket__old-price">{{i.description | currency:"ILS"}}</p>
-                <button class="ticket__buy-btn" >Buy now</button>
-              </div>
-            </div>
-          </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
    
-      </div>
-      </div>
+ 
+    <title>Hiking Kings</title>
+</head>
 
-      </section>
-          <hr class="my-5" />
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="../../assets/images/booklogo.png" alt="" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
 
-          <section class="text-center">
-            <h4 class="mb-5"><strong>New And Trending</strong></h4>
-    
-            <div class="row" >
-              <div class="col-lg-2 col-md-12 mb-4" *ngFor="let i of offer2">
-               
-            <div class="hero-container">
-              <div class="main-container">
-                <div class="poster-container">
-                  <a href="#"><img src="{{i.img}}" class="poster" /></a>
-                </div>
-                <div class="ticket-container">
-                  <div class="ticket__content">
-                    <h4 class="ticket__movie-title">{{i.name}}</h4>
-                    <p class="ticket__movie-slogan">
-                      {{i.description}}
-                    </p>
-                    <p class="ticket__current-price">{{ i.price | currency:"ILS"}}</p>
-                    <p class="ticket__old-price"></p>
-                    <button class="ticket__buy-btn">Buy now</button>
-                  </div>
+        <div class="content">
+            <h1>So many books, so little time</h1>
+            <p>Shop Now</p>
+            <div>
+                <button class="signup-btn" type="button"><span class="cover"></span>SIGN UP</button>
+                <button class="login-btn" type="button"><span class="cover"></span>LOG IN</button>
+            </div>
+        </div>
+    </div>
+    <main class="mt-5">
+        <div class="container">
+          <!--Section: Content-->
+          <section>
+            <div class="row">
+              <div class="col-md-6 gx-5 mb-4">
+                <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                  <img src="../../assets/images/reading-1246520_1920.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15); "></div>
+                  </a>
                 </div>
               </div>
+                
+              <div class="col-md-6 gx-5 mb-4">
+                <h4><strong></strong></h4>
+                <p><strong>Where we stand today?
+                </strong></p>
+                <p class="text-muted">
+                  
+                  Our in-store events feature some of today’s most interesting and provocative personalities, from Lin Manuel Miranda to Patti Smith and dialogues between such greats as Ocean Vuong and Jaqueline Woodson. If you are looking for a relaxed, intimate evening where you’ll be both engaged and entertained, we have the programming for you.            </p>
+                <p><strong>Where we’re going: Driven by You</strong></p>
+                <p class="text-muted">
+                  In all seriousness, at the BookShop, you, our book lovers, are our number one priority. As we change and grow with the times, we will never lose sight of our roots – we are a community bookstore first and foremost. We are forever invested in you and want to make your shopping experience with us a memorable, enjoyable, and easy one. A Strand is a place where books are loved and book lovers of all kinds are always welcome.
+                </p>
+              </div>
             </div>
-       
-          </div>
-          </div>
+          </section>
+          <!--Section: Content-->
     
-          </section> -->
-    </div>
-  </main>
+          <hr class="my-5" />
+    
+          <!--Section: Content-->
+
+             
+    
+             
+        </div>
+      </main>
+
+    <section class="product"> 
+        <h2 class="product-category">best selling</h2>
+   
+        <div class="product-container">
+          
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images-us.bookshop.org/ingram/9780062820266.jpg?height=500&v=v2" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images-us.bookshop.org/ingram/9780062820266.jpg?height=500&v=v2" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images-us.bookshop.org/ingram/9780062820266.jpg?height=500&v=v2" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <button class="pre-btn" appPrev></button>
+            <button class="nxt-btn" appNext></button>
+        </div>
+    </section>
+
+    <section class="product"> 
+        <h2 class="product-category">best selling</h2>
+   
+        <div class="product-container">
+          
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images-us.bookshop.org/ingram/9780062820266.jpg?height=500&v=v2" class="product-thumb" alt="">
+                    <button class="card-btn">add to Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images-us.bookshop.org/ingram/9780062820266.jpg?height=500&v=v2" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images-us.bookshop.org/ingram/9780062820266.jpg?height=500&v=v2" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="" class="product-thumb" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-description">a short line about the cloth..</p>
+                    <span class="price">$20</span><span class="actual-price">$40</span>
+                </div>
+            </div>
+            <button class="pre-btn" appPrev ></button>
+           
+            <button class="nxt-btn" appNext></button>
+        </div>
+    </section>
+    
+    
+</body>
+</html>
