@@ -16,6 +16,7 @@ import { ChatUserComponent } from './chat-user/chat-user.component';
 import { HomeComponent } from './home/home.component';
 import { PrevDirective } from './prev.directive';
 import { NextDirective } from './next.directive';
+import { ChatAdminComponent } from './admin/chat-admin/chat-admin.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NextDirective } from './next.directive';
     HomeComponent,
     PrevDirective,
     NextDirective,
+    ChatAdminComponent,
 
   ],
   imports: [

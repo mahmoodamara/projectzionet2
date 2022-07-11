@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BodyComponent } from './admin/body/body.component';
+import { ChatAdminComponent } from './admin/chat-admin/chat-admin.component';
 import { DashbordComponent } from './admin/dashbord/dashbord.component';
 import { MessageComponent } from './admin/message/message.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'messages',component:MessageComponent},
   {path:'chat-user',component:ChatUserComponent},
   {path:'home',component:HomeComponent},
+  {path:'chat-admin',component:ChatAdminComponent},
 
 
 

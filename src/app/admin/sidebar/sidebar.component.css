@@ -339,7 +339,7 @@ nav .profile-details i{
     display: none;
   }
 }
-  @media (max-width: 400px) {
+  @media (max-width: 770px) {
   .sidebar{
     width: 0;
   }
