@@ -16,24 +16,24 @@
 
                 </div>
 
-                <div class="sales-details">
+                <div class="sales-details" *ngFor="let product of products">
                   <ul class="details">
                   <li class="topic">Customer</li>
-                  <li><a href="#">Alex Doe</a></li>
+                  <li><a href=""> <img [src]="product.img" alt=""></a></li>
                 </ul>
                 <ul class="details">
                   <li class="topic">Sales</li>
-                  <li><a href="#">Delivered</a></li>
+                  <li><a href="#">{{product.name}}</a></li>
 
                 </ul>
                 <ul class="details">
                   <li class="topic">Total</li>
-                  <li><a href="#">$204.98</a></li>
+                  <li><a href="#">{{product.price}}</a></li>
                 </ul>
                 <ul class="details">
                   <li class="topic">Delete/Update</li>
                   <li><button href="#">Delete</button>
-                      <button (click)=" addToForm(204)" routerLink="/productForm">Update</button></li>
+                      <button (click)=" addToForm(product)" routerLink="/productForm">Update</button></li>
                 </ul>
                 </div>
 

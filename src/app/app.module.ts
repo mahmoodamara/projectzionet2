@@ -12,6 +12,7 @@ import { MessageComponent } from './admin/message/message.component';
 import { BodyComponent } from './admin/body/body.component';
 import { ProductsComponent } from './admin/products/products.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { ChatUserComponent } from './chat-user/chat-user.component';
 import { HomeComponent } from './home/home.component';
 import { PrevDirective } from './prev.directive';
 import { NextDirective } from './next.directive';
@@ -26,6 +27,7 @@ import { NextDirective } from './next.directive';
     BodyComponent,
     ProductsComponent,
     ProductFormComponent,
+    ChatUserComponent,
     HomeComponent,
     PrevDirective,
     NextDirective,

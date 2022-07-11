@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/models/product.model';
 import { ProductsService } from 'src/app/services/products.service';
 import { UserserviceService } from 'src/app/services/userservice.service';
 
@@ -11,11 +12,10 @@ import { UserserviceService } from 'src/app/services/userservice.service';
 })
 export class ProductFormComponent implements OnInit {
 
-  loginForm:FormGroup;
-  signupForm:FormGroup;
+  productForm:FormGroup;
   showErrorMessage: boolean=false;
   showSucssMessage: boolean=false;
-
+  productOne = new Product(0,"",0,"","","");
   actiontime:number;
   image:string="assets/images/loginphoto.jpg"
 
@@ -23,45 +23,45 @@ export class ProductFormComponent implements OnInit {
   constructor(private formBuilder:FormBuilder, private router:Router ,private productsservice:ProductsService) { }
 
   ngOnInit(): void {
-      this.createaddformLogin();
-      this.createaddform();
+    //  this.createaddform();
+      this.getProductOne();
   }
 
-  createaddformLogin(){
-    this.loginForm=this.formBuilder.group({
-    email:['',[Validators.required ,Validators.email]]
-  , password:['',[Validators.required ,Validators.minLength(8)]]
 
-  })
-}
-
+/*
 
 createaddform(){
-  this.signupForm=this.formBuilder.group({
-   username:['',[Validators.required ,Validators.minLength(3)]]
-  , email:['',[Validators.required ,Validators.email]]
-  , password:['',[Validators.required ,Validators.minLength(8)]]
-  , phone:['',[Validators.required ,Validators.minLength(9)]],
+  this.productForm=this.formBuilder.group({
+    serialNumber:['',[Validators.required]],
+    name:['',[Validators.required ,Validators.minLength(2)]]
+  , price:['',[Validators.required ]]
+  , category:['',[Validators.required ,Validators.minLength(3)]]
+  , description:['',[Validators.required ,Validators.minLength(5)]]
+  , img:['',[Validators.required ,Validators.minLength(3)]],
 
 })
 }
 
-onSubmitLogin(){
-  /*
-  this.usersservise.loginUser(this.loginForm.value)
+*/
+onSubmit(){
+
+  this.productsservice.addProduct(this.productOne)
   .subscribe(
     res => {
       this.showSucssMessage = true;
       setTimeout(() => this.showSucssMessage = false, 2000);
-      localStorage.setItem('token', this.loginForm.value.email);
-      this.router.navigate(['home']);
+
     },(err)=>{
       console.log(err)
       this.showErrorMessage = true;
       setTimeout(() => this.showErrorMessage = false, 2000);
 
     })
-*/
+
+ }
+
+ getProductOne(){
+   this.productOne = this.productsservice.getProductOne()[0];
  }
 
 
