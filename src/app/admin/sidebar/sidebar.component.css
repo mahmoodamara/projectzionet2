@@ -276,6 +276,10 @@ nav .profile-details i{
   .sidebar{
     width: 60px;
   }
+  .sidebar .logo-details .logo_name{
+    opacity: 0;
+
+  }
   .sidebar.active{
     width: 220px;
   }
@@ -343,6 +347,7 @@ nav .profile-details i{
   .sidebar{
     width: 0;
   }
+
   .sidebar.active{
     width: 60px;
   }
@@ -363,3 +368,5 @@ nav .profile-details i{
     width: calc(100% - 60px);
   }
 }
+
+

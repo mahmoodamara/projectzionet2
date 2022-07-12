@@ -1,52 +1,50 @@
 
   <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<app-sidebar></app-sidebar>
+  <div class="limiter">
 
-  <body>
-    <app-sidebar></app-sidebar>
-        <section class="home-section">
-          <div class="home-content">
+    <div class="container-table100">
 
-            <div class="sales-boxes">
-              <div class="recent-sales box">
-                <div class="title">
-                <div class="title">Recent Sales</div>
-                  <div class="button">
-                    <a routerLink="/productForm">Add Product</a>
-                  </div>
-
-                </div>
-
-                <div class="sales-details" *ngFor="let product of products">
-                  <ul class="details">
-                  <li class="topic">Customer</li>
-                  <li><a href=""> <img [src]="product.img" alt=""></a></li>
-                </ul>
-                <ul class="details">
-                  <li class="topic">Sales</li>
-                  <li><a href="#">{{product.name}}</a></li>
-
-                </ul>
-                <ul class="details">
-                  <li class="topic">Total</li>
-                  <li><a href="#">{{product.price}}</a></li>
-                </ul>
-                <ul class="details">
-                  <li class="topic">Delete/Update</li>
-                  <li><button href="#">Delete</button>
-                      <button (click)=" addToForm(product)" routerLink="/productForm">Update</button></li>
-                </ul>
-                </div>
-
+        <div class="wrap-table100">
+            <div class="bt-update">
+                <button routerLink="/productForm">Add Product</button>
               </div>
+            <div class="table100 ver1 m-b-110">
+                <div class="table100-head">
 
+                    <table>
+                        <thead>
+                            <tr class="row100 head">
+                                <th class="cell100 column1">img</th>
+                                <th class="cell100 column2">name</th>
+                                <th class="cell100 column3">price</th>
+                                <th class="cell100 column4"> Update/Delete</th>
+
+
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="table100-body js-pscroll" >
+                    <table>
+                        <tbody>
+                            <tr class="row100 body" *ngFor="let product of products">
+                                <td class="cell100 column1"><img [src]="product.img"></td>
+                                <td class="cell100 column2">{{product.name}}</td>
+                                <td class="cell100 column3">{{product.price}}</td>
+
+                                <td class="cell100 column4">
+                                    <button id="btndelete" class="btn btn-primary" (click)="onDelete(user._id)">Delete</button>
+                                    <button style="margin-left: 5px;" id="btnedit" class="btn btn-primary"   (click)="addToForm(product)" routerLink="/productForm">Update</button>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
-
-
-          </div>
-        </section>
-
-
-      </body>
+        </div>
+    </div>
+</div>
 
 

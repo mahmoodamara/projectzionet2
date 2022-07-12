@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../models/message.mode';
+import { Product } from '../models/product.model';
 import { MessageService } from '../services/message.service';
+import { ProductsService } from '../services/products.service';
 import { UserserviceService } from '../services/userservice.service';
 
 
@@ -21,12 +23,13 @@ showmassege:boolean = false;
 
 
 
-  constructor(private userservice:UserserviceService, private messageservice:MessageService) {
+  constructor(private userservice:UserserviceService, private messageservice:MessageService,private productservice : ProductsService) {
 
    }
 
   ngOnInit(): void {
     this.getUser();
+    this.getProducts();
   }
 
   getUser(){
@@ -47,4 +50,16 @@ showmassege:boolean = false;
     }, 3000);
      })
   }
+
+
+
+  products :Product[]=[];
+
+
+
+getProducts(){
+  this.productservice.getProduct().subscribe(res=>{
+    this.products=res;
+  })
+}
 }
