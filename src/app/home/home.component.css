@@ -5,7 +5,7 @@
 	padding: 1;
 	font-family: "Mulish", sans-serif;
   }
-  
+
   .banner {
 	width: 100%;
 	height: 100vh;
@@ -14,7 +14,7 @@
 	background-size: cover;
 	background-position: center;
   }
-  
+
   .navbar {
 	width: 85%;
 	margin: auto;
@@ -23,25 +23,25 @@
 	align-items: center;
 	justify-content: space-between;
   }
-  
+
   .logo {
 	width: 80px;
 	cursor: pointer;
   }
-  
+
   .navbar ul li {
 	list-style: none;
 	display: inline-block;
 	margin: 0 20px;
 	position: relative;
   }
-  
+
   .navbar ul li a {
 	text-decoration: none;
 	color: #fff;
 	text-transform: uppercase;
   }
-  
+
   .navbar ul li::after {
 	content: "";
 	height: 3px;
@@ -52,11 +52,11 @@
 	bottom: -10px;
 	transition: 0.5s;
   }
-  
+
   .navbar ul li:hover::after {
 	width: 100%;
   }
-  
+
   .content {
 	width: 100%;
 	position: absolute;
@@ -65,18 +65,29 @@
 	text-align: center;
 	color: #fff;
   }
-  
+
   .content h1 {
 	font-size: 70px;
 	margin-top: 80px;
   }
-  
+
   .content p {
-	margin: 20px auto;
-	font-weight: 100;
-	line-height: 25px;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+
   }
-  
+
   .login-btn {
 	width: 200px;
 	padding: 15px 0;
@@ -91,7 +102,7 @@
 	position: relative;
 	overflow: hidden;
   }
-  
+
   .signup-btn {
 	width: 200px;
 	padding: 15px 0;
@@ -106,7 +117,30 @@
 	position: relative;
 	overflow: hidden;
   }
-  
+
+  .chat-btn{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-delay: 2s;
+  }
+  @keyframes example {
+    0%   {background-color:#009688; left:0px; top:0px;}
+    100%  {background-color:#009688; left:5px; top:0px;}
+
+  }
+
   .cover {
 	background: #009688;
 	height: 100%;
@@ -118,22 +152,22 @@
 	z-index: -1;
 	transition: 0.5s;
   }
-  
+
   button:hover span {
 	width: 100%;
   }
-  
+
   button:hover {
 	border: none;
   }
-  
+
   /* PRODUCTS */
   .product {
 	position: relative;
 	overflow: hidden;
 	padding: 20px;
   }
-  
+
   .product-category {
 	padding: 0 10vw;
 	font-size: 30px;
@@ -141,38 +175,38 @@
 	margin-bottom: 40px;
 	text-transform: capitalize;
   }
-  
+
   .product-container {
 	padding: 0 10vw;
 	display: flex;
 	overflow-x: auto;
 	scroll-behavior: smooth;
   }
-  
+
   .product-container::-webkit-scrollbar {
 	display: none;
   }
-  
+
   .product-card {
 	flex: 0 0 auto;
 	width: 250px;
 	height: 450px;
 	margin-right: 40px;
   }
-  
+
   .product-image {
 	position: relative;
 	width: 100%;
 	height: 350px;
 	overflow: hidden;
   }
-  
+
   .product-thumb {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
   }
-  
+
   .discount-tag {
 	position: absolute;
 	background: #fff;
@@ -183,7 +217,7 @@
 	top: 10px;
 	text-transform: capitalize;
   }
-  
+
   .card-btn {
 	position: absolute;
 	bottom: 10px;
@@ -200,26 +234,26 @@
 	cursor: pointer;
 	opacity: 0;
   }
-  
+
   .product-card:hover .card-btn {
 	opacity: 1;
   }
-  
+
   .card-btn:hover {
 	background: #ff7d7d;
 	color: #fff;
   }
-  
+
   .product-info {
 	width: 100%;
 	height: 100px;
 	padding-top: 10px;
   }
-  
+
   .product-brand {
 	text-transform: uppercase;
   }
-  
+
   .product-short-description {
 	width: 100%;
 	height: 20px;
@@ -229,18 +263,18 @@
 	text-transform: capitalize;
 	margin: 5px 0;
   }
-  
+
   .price {
 	font-weight: 900;
 	font-size: 20px;
   }
-  
+
   .actual-price {
 	margin-left: 20px;
 	opacity: 0.5;
 	text-decoration: line-through;
   }
-  
+
   .pre-btn,
   .nxt-btn {
 	border: none;
@@ -252,12 +286,12 @@
 	justify-content: center;
 	align-items: center;
 	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(67, 57, 57, 0.389) 100%);
-	
-	
+
+
 	cursor: pointer;
 	z-index: 8;
   }
-  
+
   .pre-btn {
 	left: 0;
 	transform: rotate(180deg);
@@ -265,11 +299,11 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	outline: none;
-	
-	
-	
+
+
+
   }
-  
+
   .nxt-btn {
 	right: 0;
 	background-image: url(src/assets/images/arrow.png);
@@ -277,34 +311,34 @@
 	background-position: center;
 	outline: none;
   }
-  
+
   .pre-btn img,
   .nxt-btn img {
 	opacity: 0.2;
   }
-  
+
   .pre-btn:hover img,
   .nxt-btn:hover img {
 	opacity: 1;
   }
-  
+
   .collection-container {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 10px;
   }
-  
+
   .collection {
 	position: relative;
   }
-  
+
   .collection img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
   }
-  
+
   .collection p {
 	position: absolute;
 	top: 50%;
@@ -315,10 +349,95 @@
 	font-size: 50px;
 	text-transform: capitalize;
   }
-  
+
   .collection:nth-child(3) {
 	grid-column: span 2;
 	margin-bottom: 10px;
   }
-  
-  
+
+.modal .modal-dialog .modal-content .modal-body .popup-outer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  pointer-events: none;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transform: scale(1.2);
+  transition: opacity 0.2s 0s ease-in-out,
+              transform 0.2s 0s ease-in-out;
+}
+
+
+.modal .modal-dialog .modal-content .modal-body .popup-box{
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 380px;
+    width: 100%;
+}
+.popup-box .profile-text{
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.popup-box .profile-text .text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.profile-text .text .name{
+  font-size: 14px;
+  font-weight: 400;
+}
+.profile-text .text .profession{
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -4px;
+}
+.popup-box img{
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.popup-box textarea{
+  min-height: 140px;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 10px 10px 10px 14px;
+  font-weight: 400;
+  background: #f3f3f3;
+}
+.popup-box .button{
+  display: flex;
+  justify-content: flex-end;
+}
+.popup-box .button button{
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  background: #6f93f6;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.button button.cancel{
+  background: #f082ac;
+}
+.button button.cancel:hover{
+  background: #ec5f95;
+}
+.button button.send:hover{
+  background: #275df1;
+}
