@@ -9,7 +9,7 @@
           <div class="box">
             <div class="right-side">
               <div class="box-topic">USERS</div>
-              <div class="number">40,876</div>
+              <div class="number">{{countUsers}}</div>
             </div>
             <i class='fa fa-user' style="font-size: 36px; margin-left: 10px;"></i>
           </div>
@@ -22,8 +22,8 @@
           </div>
           <div class="box">
             <div class="right-side">
-              <div class="box-topic">TEAM</div>
-              <div class="number">$12,876</div>
+              <div class="box-topic">Products</div>
+              <div class="number">{{countProducts}}</div>
 
             </div>
             <i class='fa fa-users' style="font-size: 36px; margin-left: 12px;" ></i>
@@ -31,144 +31,61 @@
           <div class="box">
             <div class="right-side">
               <div class="box-topic">MESSAGES</div>
-              <div class="number">11,086</div>
+              <div class="number">{{countMessages}}</div>
 
             </div>
             <i class='fa fa-envelope'  style="font-size: 36px; margin-left: 12px;" ></i>
           </div>
         </div>
 
-        <div class="sales-boxes">
-          <div class="recent-sales box">
-            <div class="title">Recent Sales</div>
-            <div class="sales-details">
-              <ul class="details">
-              <li class="topic">Customer</li>
-              <li><a href="#">Alex Doe</a></li>
-            </ul>
-            <ul class="details">
-              <li class="topic">Sales</li>
-              <li><a href="#">Delivered</a></li>
 
-            </ul>
-            <ul class="details">
-              <li class="topic">Total</li>
-              <li><a href="#">$204.98</a></li>
-            </ul>
-            </div>
-            <div class="sales-details">
-              <ul class="details">
-              <li class="topic">Customer</li>
-              <li><a href="#">Alex Doe</a></li>
-            </ul>
-            <ul class="details">
-              <li class="topic">Sales</li>
-              <li><a href="#">Delivered</a></li>
+        <div class="limiter">
 
-            </ul>
-            <ul class="details">
-              <li class="topic">Total</li>
-              <li><a href="#">$204.98</a></li>
-            </ul>
-            </div>
-            <div class="sales-details">
-              <ul class="details">
-              <li class="topic">Customer</li>
-              <li><a href="#">Alex Doe</a></li>
-            </ul>
-            <ul class="details">
-              <li class="topic">Sales</li>
-              <li><a href="#">Delivered</a></li>
+          <div class="container-table100">
 
-            </ul>
-            <ul class="details">
-              <li class="topic">Total</li>
-              <li><a href="#">$204.98</a></li>
-            </ul>
-            </div>
-            <div class="sales-details">
-              <ul class="details">
-              <li class="topic">Customer</li>
-              <li><a href="#">Alex Doe</a></li>
-            </ul>
-            <ul class="details">
-              <li class="topic">Sales</li>
-              <li><a href="#">Delivered</a></li>
+              <div class="wrap-table100">
+                  <div class="bt-update">
+                      <button routerLink="/adminProducts">All products</button>
+                    </div>
+                  <div class="table100 ver1 m-b-110">
+                      <div class="table100-head">
 
-            </ul>
-            <ul class="details">
-              <li class="topic">Total</li>
-              <li><a href="#">$204.98</a></li>
-            </ul>
-            </div>
-            <div class="sales-details">
-              <ul class="details">
-              <li class="topic">Customer</li>
-              <li><a href="#">Alex Doe</a></li>
-            </ul>
-            <ul class="details">
-              <li class="topic">Sales</li>
-              <li><a href="#">Delivered</a></li>
+                          <table>
+                              <thead>
+                                  <tr class="row100 head">
+                                      <th class="cell100 column1">img</th>
+                                      <th class="cell100 column2">name</th>
+                                      <th class="cell100 column3">price</th>
+                                      <th class="cell100 column4"> Update/Delete</th>
 
-            </ul>
-            <ul class="details">
-              <li class="topic">Total</li>
-              <li><a href="#">$204.98</a></li>
-            </ul>
-            </div>
-            <div class="button">
-              <a href="#">See All</a>
-            </div>
+
+                                  </tr>
+                              </thead>
+                          </table>
+                      </div>
+
+                      <div class="table100-body js-pscroll" >
+                          <table>
+                              <tbody>
+                                  <tr class="row100 body" *ngFor="let product of products">
+                                      <td class="cell100 column1"><img [src]="product.img"></td>
+                                      <td class="cell100 column2">{{product.name}}</td>
+                                      <td class="cell100 column3">{{product.price}}</td>
+
+                                      <td class="cell100 column4">
+                                          <button id="btndelete" class="btn btn-primary" (click)="onDelete(user._id)">Delete</button>
+                                          <button style="margin-left: 5px;" id="btnedit" class="btn btn-primary"   (click)="addToForm(product)" routerLink="/productForm">Update</button>
+                                  </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="top-sales box">
-            <div class="title">Top Seling Product</div>
-            <ul class="top-sales-details">
-              <li>
-              <a href="#">
-                <img src="https://c4.wallpaperflare.com/wallpaper/797/12/1023/heart-love-image-book-4k-wallpaper-preview.jpg" alt="">
-                <span class="product">Vuitton Sunglasses</span>
-              </a>
-              <span class="price">$1107</span>
-            </li>
-            </ul>
-            <ul class="top-sales-details">
-              <li>
-              <a href="#">
-                <img src="https://c4.wallpaperflare.com/wallpaper/797/12/1023/heart-love-image-book-4k-wallpaper-preview.jpg" alt="">
-                <span class="product">Vuitton Sunglasses</span>
-              </a>
-              <span class="price">$1107</span>
-            </li>
-            </ul>
-            <ul class="top-sales-details">
-              <li>
-              <a href="#">
-                <img src="https://c4.wallpaperflare.com/wallpaper/797/12/1023/heart-love-image-book-4k-wallpaper-preview.jpg" alt="">
-                <span class="product">Vuitton Sunglasses</span>
-              </a>
-              <span class="price">$1107</span>
-            </li>
-            </ul>
-            <ul class="top-sales-details">
-              <li>
-              <a href="#">
-                <img src="https://c4.wallpaperflare.com/wallpaper/797/12/1023/heart-love-image-book-4k-wallpaper-preview.jpg" alt="">
-                <span class="product">Vuitton Sunglasses</span>
-              </a>
-              <span class="price">$1107</span>
-            </li>
-            </ul>
-            <ul class="top-sales-details">
-              <li>
-              <a href="#">
-                <img src="https://c4.wallpaperflare.com/wallpaper/797/12/1023/heart-love-image-book-4k-wallpaper-preview.jpg" alt="">
-                <span class="product">Vuitton Sunglasses</span>
-              </a>
-              <span class="price">$1107</span>
-            </li>
-            </ul>
-          </div>
-        </div>
+      </div>
+
+
       </div>
     </section>
 

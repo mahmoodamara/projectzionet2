@@ -14,6 +14,17 @@ router.get('/messages', (req, res) => {
     });
 });
 
+router.route('/countMessages').get(function (req, res) {
+  Message.count({}, function (err, result) {
+      if (err) {
+          res.send(err)
+      } else {
+          res.json(result)
+      }
+  })
+})
+
+
 router.get('/messagesUsers', (req, res) => {
   Message.find().sort({ time: -1 }).exec(function(err, docs) {
       if (!err) { res.send(docs); }

@@ -16,6 +16,16 @@ router.get('/products', (req, res) => {
   });
 });
 
+router.route('/countProducts').get(function (req, res) {
+  Product.count({}, function (err, result) {
+      if (err) {
+          res.send(err)
+      } else {
+          res.json(result)
+      }
+  })
+})
+
 
 router.post('/products', (req, res) => {
   var product = new Product({

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,10 @@ export class UserserviceService {
 
   headers = { 'content-type': 'application/json' };
   constructor(private http : HttpClient) { }
+
+  getUsers(){
+    return this.http.get(this.baseURL);
+  }
 
 PostUser(user){
     return this.http.post<any>(this.baseURL+'/signup',user,{
@@ -30,5 +35,11 @@ loginUser(user){
   }
   getToken() {
     return localStorage.getItem('token');
+  }
+  putUser(user: User) {
+    return this.http.put(this.baseURL + `/${user._id}`, user);
+  }
+  deleteUser(_id: string) {
+    return this.http.delete(this.baseURL + `/${_id}`);
   }
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { BodyComponent } from './admin/body/body.component';
 import { ChatAdminComponent } from './admin/chat-admin/chat-admin.component';
 import { DashbordComponent } from './admin/dashbord/dashbord.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'chat-user',component:ChatUserComponent},
   {path:'home',component:HomeComponent},
   {path:'chat-admin',component:ChatAdminComponent},
+  {path:'adminUsers',component:AdminUsersComponent},
 
 
 
