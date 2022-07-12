@@ -21,7 +21,11 @@ export class MessageService {
     return this.http.get(this.baseURL + 'messagesUsers');
   }
 
-  getUserMessage(userEmail:any):Observable<any>{
+  getUserMessage(userName:any):Observable<any>{
+    this.baseUrlUser = `${this.baseURL + 'messages'}/userName?userName=${userName}`
+    return this.http.get(this.baseUrlUser);
+  }
+  getUserMessageEmail(userEmail:any):Observable<any>{
     this.baseUrlUser = `${this.baseURL + 'messages'}/userEmail?userEmail=${userEmail}`
     return this.http.get(this.baseUrlUser);
   }

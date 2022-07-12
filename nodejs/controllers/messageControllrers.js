@@ -5,7 +5,7 @@ var ObjectId = require('mongoose').Types.ObjectId;
 var {Message} = require('../models/message');
 
 router.get('/messages', (req, res) => {
-  Message.find((err, docs) => {
+  Message.distinct("userName",{},(err, docs) => {
         if (!err) {
             res.send(docs);
         } else {
@@ -27,6 +27,19 @@ router.get('/messages/userEmail', (req, res) => {
   const userEmail = req.query.userEmail;
   Message.find({
     userEmail: userEmail
+  }, function (err, response) {
+    if (err)
+      res.send(err);
+    else
+      res.send(response)
+  })
+});
+
+
+router.get('/messages/userName', (req, res) => {
+  const userName = req.query.userName;
+  Message.find({
+    userName: userName
   }, function (err, response) {
     if (err)
       res.send(err);

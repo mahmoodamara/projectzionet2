@@ -16,30 +16,43 @@ export class ChatAdminComponent implements OnInit {
   userActiv =''
   users:Message[]=[];
   userMessages:Message = new Message();
+  j=1;
 
   ngOnInit(): void {
     this.getMessages();
+    this.getusers();
    }
 
   getMessages(){
     this.messageservice.getUsers().subscribe(res=>{
         this.message=res;
+        console.log(this.message)
     })
   }
 
-  getUserMessage(user:Message){
+  getusers(){
+    this.messageservice.getmessages().subscribe(res=>{
+        this.users=res;
+        console.log(this.users)
+    })
+  }
+
+  getUserMessage(user){
       this.userActiv=user.userName
-      this.userMessages = user;
+
       this.userMessages.userMessage='';
-      this.messageservice.getUserMessage(user.userEmail).subscribe(res=>{
+      this.messageservice.getUserMessage(user).subscribe(res=>{
           this.messageUser=res;
       })
   }
 
   postMessage(){
+    this.userMessages.userEmail =this.messageUser[0].userEmail ;
+    this.userMessages.userName =this.messageUser[0].userName ;
      this.messageservice.PostMessage(this.userMessages).subscribe(res=>{
        this.getMessages();
-       this.getUserMessage(this.userMessages);
+       this.getUserMessage(this.userMessages.userName);
+       this.userMessages.adminMessage='';
      })
   }
 

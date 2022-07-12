@@ -19,12 +19,13 @@ export class ChatUserComponent implements OnInit {
   users:Message[]=[];
   userMessages:Message = new Message();
   email:string=localStorage.getItem('token');
-
+  name:string
 
   ngOnInit(): void {
     this.getMessages();
-    this.getUserMessage();
     this.getUser();
+    this.getUserMessage();
+
    }
 
   getMessages(){
@@ -33,17 +34,18 @@ export class ChatUserComponent implements OnInit {
     })
   }
 
-  getUserMessage(){
-      this.messageservice.getUserMessage(this.email).subscribe(res=>{
-          this.messageUser=res;
-      })
-  }
+
   getUser(){
     this.userservice.getUser().subscribe(res=>{
       this.userActiv=res;
+       console.log(this.userActiv[0].username);
   })
   }
-
+  getUserMessage(){
+    this.messageservice.getUserMessageEmail(this.email).subscribe(res=>{
+        this.messageUser=res;
+    })
+}
 
   postMessage(){
     this.userMessages.userName= this.userActiv[0].username;
