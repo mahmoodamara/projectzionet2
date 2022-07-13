@@ -8,8 +8,10 @@ import { MessageComponent } from './admin/message/message.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { ProductsComponent } from './admin/products/products.component';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { BookCategoryComponent } from './book-category/book-category.component';
 import { ChatUserComponent } from './chat-user/chat-user.component';
 import { HomeComponent } from './home/home.component';
+
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -26,6 +28,8 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'chat-admin',component:ChatAdminComponent},
   {path:'adminUsers',component:AdminUsersComponent},
+  {path:'bookcategory',component:BookCategoryComponent},
+  
 
 
 

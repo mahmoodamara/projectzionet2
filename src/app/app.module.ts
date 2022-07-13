@@ -19,6 +19,8 @@ import { NextDirective } from './next.directive';
 import { ChatAdminComponent } from './admin/chat-admin/chat-admin.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
+import { BookCategoryComponent } from './book-category/book-category.component';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
     ChatAdminComponent,
     NavbarComponent,
     AdminUsersComponent,
+    BookCategoryComponent,
+    
 
   ],
   imports: [

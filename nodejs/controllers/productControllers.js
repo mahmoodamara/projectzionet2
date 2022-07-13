@@ -16,6 +16,19 @@ router.get('/products', (req, res) => {
   });
 });
 
+
+router.get('/products/:category', (req, res) => {
+  Product.find({category:req.params.category}, (err, docs) => {
+    if (!err) {
+      res.send(docs);
+    } else {
+      console.log('Error in Retriving Product :' + JSON.stringify(err, undefined, 2));
+    }
+  });
+});
+
+
+
 router.route('/countProducts').get(function (req, res) {
   Product.count({}, function (err, result) {
       if (err) {
@@ -86,6 +99,17 @@ router.delete('/products/:id', (req, res) => {
     }
   });
 });
+
+router.route('/countMessages').get(function (req, res) {
+  Message.count({}, function (err, result) {
+      if (err) {
+          res.send(err)
+      } else {
+          res.json(result)
+      }
+  })
+})
+
 
 
 module.exports = router;
