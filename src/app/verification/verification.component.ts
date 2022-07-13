@@ -62,4 +62,7 @@ export class VerificationComponent implements OnInit {
     });
    }
 
+   sendEmail(){
+   }
+
 }

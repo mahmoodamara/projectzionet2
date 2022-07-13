@@ -16,6 +16,7 @@ export class ProductFormComponent implements OnInit {
   showErrorMessage: boolean=false;
   showSucssMessage: boolean=false;
   productOne = new Product(0,"",0,"","","");
+  productOne2 = new Product(0,"",0,"","","");
   actiontime:number;
   image:string="assets/images/loginphoto.jpg"
 
@@ -24,7 +25,7 @@ export class ProductFormComponent implements OnInit {
 
   ngOnInit(): void {
     //  this.createaddform();
-      this.getProductOne();
+    this.getProductOne();
   }
 
 
@@ -61,7 +62,9 @@ onSubmit(){
  }
 
  getProductOne(){
+  if(this.productsservice.products.length>0){
    this.productOne = this.productsservice.getProductOne()[0];
+  }
  }
 
 

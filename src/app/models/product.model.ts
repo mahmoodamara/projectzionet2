@@ -6,7 +6,7 @@ export class Product {
   category:string;
   description:string;
   img:string;
-
+  
   constructor( serialNumber:number,name:string,price:number,category:string,description:string,img:string){
     this.serialNumber=serialNumber;
     this.name=name;
