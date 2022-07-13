@@ -19,6 +19,9 @@ import { NextDirective } from './next.directive';
 import { ChatAdminComponent } from './admin/chat-admin/chat-admin.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { VerificationComponent } from './verification/verification.component';
+import { SuccessPageComponent } from './success-page/success-page.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
     ChatAdminComponent,
     NavbarComponent,
     AdminUsersComponent,
+    ForgetPasswordComponent,
+    VerificationComponent,
+    SuccessPageComponent,
 
   ],
   imports: [
