@@ -10,9 +10,12 @@ import { ProductsComponent } from './admin/products/products.component';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { BookCategoryComponent } from './book-category/book-category.component';
 import { ChatUserComponent } from './chat-user/chat-user.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { HomeComponent } from './home/home.component';
 
 import { LoginComponent } from './login/login.component';
+import { SuccessPageComponent } from './success-page/success-page.component';
+import { VerificationComponent } from './verification/verification.component';
 
 const routes: Routes = [
   { path:'',pathMatch:'full',redirectTo:'login'},
@@ -28,8 +31,16 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'chat-admin',component:ChatAdminComponent},
   {path:'adminUsers',component:AdminUsersComponent},
+
   {path:'bookcategory',component:BookCategoryComponent},
   
+
+  {path:'forget-password',component:ForgetPasswordComponent},
+  {path:'verification',component:VerificationComponent},
+  {path:'success-page',component:SuccessPageComponent},
+
+
+
 
 
 
