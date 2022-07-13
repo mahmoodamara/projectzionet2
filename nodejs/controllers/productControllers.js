@@ -48,6 +48,9 @@ router.post('/products', (req, res) => {
     price: req.body.price,
     name: req.body.name,
     description: req.body.description,
+    quantity:req.body.quantity,
+    sales:req.body.sales
+
 
 
   });
@@ -72,6 +75,8 @@ router.put('/products/:id', (req, res) => {
     price: req.body.price,
     name: req.body.name,
     description: req.body.description,
+    quantity:req.body.quantity,
+    sales:req.body.sales
 
   };
   Product.findByIdAndUpdate(req.params.id, {

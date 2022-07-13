@@ -8,7 +8,10 @@ const mongoose = require('mongoose');
     img: {type:String},
     category:{type: String},
     price:{type: Number},
-    description:{type: String}
+    description:{type: String},
+    quantity:{type:Number},
+    sales:{type:Number}
+
 });
 
   module.exports = {Product}

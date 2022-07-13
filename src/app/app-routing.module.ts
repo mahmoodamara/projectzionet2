@@ -31,10 +31,7 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'chat-admin',component:ChatAdminComponent},
   {path:'adminUsers',component:AdminUsersComponent},
-
   {path:'bookcategory',component:BookCategoryComponent},
-  
-
   {path:'forget-password',component:ForgetPasswordComponent},
   {path:'verification',component:VerificationComponent},
   {path:'success-page',component:SuccessPageComponent},
