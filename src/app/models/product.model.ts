@@ -1,6 +1,6 @@
 export class Product {
   _id:any
-  serialNumber:number
+  serialNumber:number;
   name:string;
   price:number;
   category:string;
