@@ -73,7 +73,8 @@ loginUser(user){
 
   logout() {
     localStorage.removeItem('token');
-    this.router.navigate(['/login']);
+    localStorage.clear();
+    this.router.navigate(['login']);
   }
 
 }

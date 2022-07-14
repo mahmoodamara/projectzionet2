@@ -50,13 +50,14 @@ onSubmitLogin(){
   this.usersservise.loginUser(this.loginForm.value)
   .subscribe(
     res => {
-      this.showSucssMessage = true;
-      setTimeout(() => this.showSucssMessage = false, 2000);
       localStorage.setItem('token', this.loginForm.value.email);
-      if(this.loginForm.value.email!='admin@gmail.com')
+
+      if(this.loginForm.value.email!='admin@gmail.com'){
              this.router.navigate(['home']);
-      else
+      }
+      else{
              this.router.navigate(['/dashbord']);
+      }
     },(err)=>{
       console.log(err)
       this.showErrorMessage = true;
