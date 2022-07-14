@@ -27,6 +27,7 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { VerificationComponent } from './verification/verification.component';
 import { SuccessPageComponent } from './success-page/success-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { FooterComponent } from './footer/footer.component';
     VerificationComponent,
     SuccessPageComponent,
     FooterComponent,
+    CartComponent,
 
 
   ],

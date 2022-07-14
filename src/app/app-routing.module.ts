@@ -9,6 +9,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
 import { ProductsComponent } from './admin/products/products.component';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { BookCategoryComponent } from './book-category/book-category.component';
+import { CartComponent } from './cart/cart.component';
 import { ChatUserComponent } from './chat-user/chat-user.component';
 import { FooterComponent } from './footer/footer.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path:'verification',component:VerificationComponent},
   {path:'success-page',component:SuccessPageComponent},
   {path:'navbar',component:NavbarComponent},
-  {path:'footer',component:FooterComponent}
+  {path:'footer',component:FooterComponent},
+  {path:'cart',component:CartComponent}
 
 
 

@@ -1,0 +1,35 @@
+<div class="yes">
+    <app-navbar></app-navbar>
+    <section class="cart_section" >
+      
+      <div class="container">
+      <table datatable class="row-border hover ">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+           
+           
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of " >
+            <td><img src="{{i.product.img}}"></td>
+            <td>{{i.product.name}}</td>
+            <td>{{ price(i.product.serialNumber)| currency:"ILS"}}</td>
+            <br><br>
+            <i (click)="deleteProduct(i)" class="bi bi-trash"></i>
+          </tr>
+          </tbody>
+          </table>
+          <br>
+          <button>Check Out</button>
+          <h2>Total : </h2>
+        </div>
+        
+    </section>
+    <br>
+    
+    <app-footer></app-footer>
+    </div>
