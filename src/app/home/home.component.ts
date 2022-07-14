@@ -41,16 +41,16 @@ showmassege:boolean = false;
       this.name=this.userActiv[0].username;
   })
   }
-  postMessage(){
-    this.userMessages.userName= this.name;
-    this.userMessages.userEmail=this.email;
-     this.messageservice.PostMessageUser(this.userMessages).subscribe(res=>{
-      this.showmassege = true;
-      setTimeout(()=>{
-        this.showmassege = false;
-    }, 3000);
-     })
-  }
+  // postMessage(){
+  //   this.userMessages.userName= this.name;
+  //   this.userMessages.userEmail=this.email;
+  //    this.messageservice.PostMessageUser(this.userMessages).subscribe(res=>{
+  //     this.showmassege = true;
+  //     setTimeout(()=>{
+  //       this.showmassege = false;
+  //   }, 3000);
+  //    })
+  // }
 
 
 
