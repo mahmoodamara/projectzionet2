@@ -8,6 +8,7 @@ import { MessageComponent } from './admin/message/message.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { ProductsComponent } from './admin/products/products.component';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { UsersComponent } from './admin/users/users.component';
 import { BookCategoryComponent } from './book-category/book-category.component';
 import { CartComponent } from './cart/cart.component';
 import { ChatUserComponent } from './chat-user/chat-user.component';
@@ -40,7 +41,9 @@ const routes: Routes = [
   {path:'success-page',component:SuccessPageComponent},
   {path:'navbar',component:NavbarComponent},
   {path:'footer',component:FooterComponent},
-  {path:'cart',component:CartComponent}
+  {path:'cart',component:CartComponent},
+  {path:'users',component:UsersComponent}
+
 
 
 

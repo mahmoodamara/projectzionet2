@@ -15,7 +15,7 @@ export class DashbordService {
     return this.http.get(this.baseURL + 'countUsers');
   }
   getCountMessages(): Observable<any> {
-    return this.http.get(this.baseURL + 'countMessages');
+    return this.http.get(this.baseURL + 'messagesUsers');
   }
   getCountProducts(): Observable<any> {
     return this.http.get(this.baseURL + 'countProducts');

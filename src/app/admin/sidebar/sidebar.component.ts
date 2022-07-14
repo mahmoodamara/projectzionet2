@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { UserserviceService } from 'src/app/services/userservice.service';
 
 
 @Component({
@@ -9,7 +10,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class SidebarComponent implements OnInit {
   screenWidth = 0;
   collapsed:boolean = true;
-  constructor() { }
+
+  constructor(private userservice:UserserviceService) { }
 
   navData: any[] =[{routerLink:'/dashbord',icon:'fa fa-home',lable:'Dashbord'},
                    {routerLink:'/message',icon:'fa fa-home',lable:'Messages'}]
@@ -25,6 +27,9 @@ export class SidebarComponent implements OnInit {
     this.collapsed = false;
    // this.onToggleSideNav.emit({collapsed:this.collapsed,screenWidth:this.screenWidth})
 
+  }
+  logOut(){
+    this.userservice.logout();
   }
 
 }

@@ -28,6 +28,7 @@ import { VerificationComponent } from './verification/verification.component';
 import { SuccessPageComponent } from './success-page/success-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
+import { UsersComponent } from './admin/users/users.component';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { CartComponent } from './cart/cart.component';
     SuccessPageComponent,
     FooterComponent,
     CartComponent,
+    UsersComponent,
 
 
   ],

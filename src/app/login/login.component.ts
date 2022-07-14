@@ -53,7 +53,10 @@ onSubmitLogin(){
       this.showSucssMessage = true;
       setTimeout(() => this.showSucssMessage = false, 2000);
       localStorage.setItem('token', this.loginForm.value.email);
-      this.router.navigate(['home']);
+      if(this.loginForm.value.email!='admin@gmail.com')
+             this.router.navigate(['home']);
+      else
+             this.router.navigate(['/dashbord']);
     },(err)=>{
       console.log(err)
       this.showErrorMessage = true;

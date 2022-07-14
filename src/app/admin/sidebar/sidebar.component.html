@@ -5,39 +5,33 @@
   </div>
     <ul class="nav-links">
       <li>
-        <a href="#" class="active">
+        <a routerLink="/dashbord" routerLinkActive="active">
           <i class='fa fa-tachometer' ></i>
           <span class="links_name">Dashboard</span>
         </a>
       </li>
       <li>
-        <a  routerLink="/adminProducts">
+        <a  routerLink="/adminProducts" routerLinkActive="active">
           <i class='fa fa-list' ></i>
           <span class="links_name">Product</span>
         </a>
       </li>
       <li>
-        <a href="#">
-          <i class='fa fa-shopping-cart' ></i>
-          <span class="links_name">Order list</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
+        <a routerLink="/users" routerLinkActive="active">
           <i class='fa fa-users' ></i>
           <span class="links_name">Users</span>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a routerLink="/chat-admin" routerLinkActive="active">
           <i class='fa fa-envelope' ></i>
           <span class="links_name">Chats</span>
         </a>
       </li>
       <li class="log_out">
-        <a href="#">
+        <a (click)="logOut()" style="cursor: pointer;">
           <i class='fa fa-sign-out'></i>
-          <span class="links_name">Log out</span>
+          <span  class="links_name">Log out</span>
         </a>
       </li>
     </ul>

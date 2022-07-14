@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Route } from '@angular/router';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Email } from '../models/email.model';
 import { User } from '../models/user.model';
@@ -20,7 +20,7 @@ export class UserserviceService {
 
 
   headers = { 'content-type': 'application/json' };
-  constructor(private http : HttpClient , private router:Route) { }
+  constructor(private http : HttpClient , private router:Router) { }
 
   getUsers():Observable<any>{
     return this.http.get(this.baseURL);
@@ -71,6 +71,9 @@ loginUser(user){
     return this.http.delete(this.baseURLEmail + `/${_id}`);
   }
 
-
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }
 
 }
