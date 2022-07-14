@@ -10,10 +10,12 @@ import { ProductsComponent } from './admin/products/products.component';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { BookCategoryComponent } from './book-category/book-category.component';
 import { ChatUserComponent } from './chat-user/chat-user.component';
+import { FooterComponent } from './footer/footer.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { HomeComponent } from './home/home.component';
 
 import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { SuccessPageComponent } from './success-page/success-page.component';
 import { VerificationComponent } from './verification/verification.component';
 
@@ -35,6 +37,8 @@ const routes: Routes = [
   {path:'forget-password',component:ForgetPasswordComponent},
   {path:'verification',component:VerificationComponent},
   {path:'success-page',component:SuccessPageComponent},
+  {path:'navbar',component:NavbarComponent},
+  {path:'footer',component:FooterComponent}
 
 
 
