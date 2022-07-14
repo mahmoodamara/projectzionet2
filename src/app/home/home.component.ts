@@ -41,9 +41,7 @@ showmassege:boolean = false;
   postMessage(){
     this.userMessages.userName= this.name;
     this.userMessages.userEmail=this.email;
-    this.userMessages.adminMessage='';
-
-     this.messageservice.PostMessage(this.userMessages).subscribe(res=>{
+     this.messageservice.PostMessageUser(this.userMessages).subscribe(res=>{
       this.showmassege = true;
       setTimeout(()=>{
         this.showmassege = false;

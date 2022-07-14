@@ -30,18 +30,18 @@ export class MessageComponent implements OnInit {
   getUserMessage(user:Message){
       this.userActiv=user.userName
       this.userMessages = user;
-      this.userMessages.userMessage='';
+  //    this.userMessages.userMessage='';
       this.messageservice.getUserMessage(user.userEmail).subscribe(res=>{
           this.messageUser=res;
       })
   }
 
-  postMessage(){
-     this.messageservice.PostMessage(this.userMessages).subscribe(res=>{
-       this.getMessages();
-       this.getUserMessage(this.userMessages);
-     })
-  }
+  // postMessage(){
+  //    this.messageservice.PostMessage(this.userMessages).subscribe(res=>{
+  //      this.getMessages();
+  //      this.getUserMessage(this.userMessages);
+  //    })
+  // }
 
 
 

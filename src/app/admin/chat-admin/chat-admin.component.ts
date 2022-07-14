@@ -20,7 +20,7 @@ export class ChatAdminComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMessages();
-    this.getusers();
+    // this.getusers();
    }
 
   getMessages(){
@@ -30,18 +30,17 @@ export class ChatAdminComponent implements OnInit {
     })
   }
 
-  getusers(){
-    this.messageservice.getmessages().subscribe(res=>{
-        this.users=res;
-        console.log(this.users)
-    })
-  }
+  // getusers(){
+  //   this.messageservice.getmessages().subscribe(res=>{
+  //       this.users=res;
+  //       console.log(this.users)
+  //   })
+  // }
 
   getUserMessage(user){
-      this.userActiv=user.userName
-
-      this.userMessages.userMessage='';
-      this.messageservice.getUserMessage(user).subscribe(res=>{
+      this.userActiv=user
+     // this.userMessages.userMessage='';
+      this.messageservice.getUserMessageEmail(user.userEmail).subscribe(res=>{
           this.messageUser=res;
       })
   }
@@ -49,10 +48,9 @@ export class ChatAdminComponent implements OnInit {
   postMessage(){
     this.userMessages.userEmail =this.messageUser[0].userEmail ;
     this.userMessages.userName =this.messageUser[0].userName ;
-     this.messageservice.PostMessage(this.userMessages).subscribe(res=>{
+     this.messageservice.PostMessageAdmin(this.userMessages).subscribe(res=>{
        this.getMessages();
-       this.getUserMessage(this.userMessages.userName);
-       this.userMessages.adminMessage='';
+       this.getUserMessage(this.userActiv);
      })
   }
 

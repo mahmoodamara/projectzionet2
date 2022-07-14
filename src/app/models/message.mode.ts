@@ -3,9 +3,12 @@ export class Message {
       time:Date;
       userName:string;
       userEmail:string;
-      userMessage:string;
-      adminMessage:string
+      userMessage:Array<Message>;
+      adminMessage:Array<Message>;
       adminName:string;
+      messuser:string
+      messadmin:string
+
 /*
       constructor(userName:string,userEmail:string,userMessage:string,adminMessage:string){
         this.userName=userName;

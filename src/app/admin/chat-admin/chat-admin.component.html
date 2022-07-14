@@ -17,11 +17,11 @@
           </div>
         </div>
 
-        <a  class="list-group-item list-group-item-action border-0" *ngFor="let user of users " (click)="getUserMessage(user)">
+        <a  class="list-group-item list-group-item-action border-0" *ngFor="let user of message " (click)="getUserMessage(user)">
           <div class="badge bg-success float-right">5</div>
           <div class="d-flex align-items-start">
             <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="rounded-circle mr-1" alt="Vanessa Tucker" width="40" height="40">
-            <div class="flex-grow-1 ml-3">{{user}}<div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+            <div class="flex-grow-1 ml-3">{{user.userName}}<div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
             </div>
           </div>
         </a>
@@ -47,37 +47,38 @@
         </div>
 
         <div class="position-relative">
-          <div class="chat-messages p-4" *ngFor="let mess of messageUser">
+          <div class="chat-messages p-4" *ngFor="let mess of messageUser index as i">
 
 
-            <div class="chat-message-right mb-4" *ngIf="mess.adminMessage.length>0">
-              <div>
-                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40">
-                <div class="text-muted small text-nowrap mt-2">{{date(mess.time)}}</div>
-              </div>
-              <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                <div class="font-weight-bold mb-1">admin</div>
-                {{mess.adminMessage}}
-              </div>
-            </div>
-
-            <div class="chat-message-left pb-4" *ngIf="mess.userMessage.length>0">
+            <div *ngFor="let meu of mess.userMessage ">
+            <div class="chat-message-left pb-4" *ngIf="meu.messuser.length>0">
               <div>
                 <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="rounded-circle mr-1" alt="Sharon Lessman" width="40" height="40">
-                <div class="text-muted small text-nowrap mt-2">{{date(mess.time)}}</div>
+                <div class="text-muted small text-nowrap mt-2">{{date(meu.time)}}</div>
               </div>
               <div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
                 <div class="font-weight-bold mb-1">{{mess.userName}}</div>
-                {{mess.userMessage}}
+                {{meu.messuser}}
+              </div>
+          </div>
+
+            <div class="chat-message-right mb-4" *ngIf="meu.messadmin.length>0" >
+              <div>
+                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40">
+                <div class="text-muted small text-nowrap mt-2">{{date(meu.time)}}</div>
+              </div>
+              <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                <div class="font-weight-bold mb-1">admin</div>
+                {{meu.messadmin}}
               </div>
             </div>
-
+          </div>
           </div>
         </div>
 
         <div class="flex-grow-0 py-3 px-4 border-top">
           <div class="input-group">
-            <input [(ngModel)]="userMessages.adminMessage" type="text" class="form-control" placeholder="Type your message">
+            <input [(ngModel)]="userMessages.messadmin" type="text" class="form-control" placeholder="Type your message">
             <button (click)="postMessage()" class="btn btn-primary">Send</button>
           </div>
         </div>
