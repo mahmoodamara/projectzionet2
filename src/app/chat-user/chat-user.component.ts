@@ -59,4 +59,17 @@ export class ChatUserComponent implements OnInit {
 
   }
 
+  date(date){
+    let d = new Date(date);
+    let time = d.getHours() + ":" + d.getMinutes();
+    if(d.getHours()>=12 && d.getHours()<24){
+      time +="pm"
+    }
+    else{
+      time +="am"
+    }
+
+    return time;
+  }
+
 }

@@ -10,6 +10,7 @@ import { ProductsService } from '../services/products.service';
 })
 export class CartComponent implements OnInit {
   carts:Cart[]=[];
+  totalPriceAfter:number;
   constructor(private cartservice:CartService, private productservice:ProductsService) { }
 
   ngOnInit(): void {
@@ -23,7 +24,7 @@ export class CartComponent implements OnInit {
     console.log(this.carts);
      });
   }
-  // increase product in cart 
+  // increase product in cart
   increase(serialnumber){
     for(let cart of this.carts){
       if(serialnumber===cart.product.serialNumber){
@@ -65,7 +66,9 @@ decrease(serialnumber){
     return price;
   }
 
-
+  totalPriceAftersh(){
+    return (this.totalPrice()+12.99);
+  }
 
 
   totalPrice():number{

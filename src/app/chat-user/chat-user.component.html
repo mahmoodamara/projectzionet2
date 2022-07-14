@@ -1,6 +1,8 @@
 
-<app-sidebar></app-sidebar>
+<div class="ht__bradcaump__area bg-image--6" >
+  <app-navbar></app-navbar>
 
+</div>
 <div class="container">
 
   <!-- Page header start -->
@@ -54,10 +56,10 @@
                                           <div class="chat-name">admin</div>
                                       </div>
                                       <div class="chat-text">{{meu.messadmin}}</div>
-                                      <div class="chat-hour">{{mess.time}} <span class="fa fa-check-circle"></span></div>
+                                      <div class="chat-hour">{{date(meu.time)}} <span class="fa fa-check-circle"></span></div>
                                   </li>
                                   <li class="chat-right" *ngIf="meu.messuser.length>0">
-                                      <div class="chat-hour">08:56 <span class="fa fa-check-circle"></span></div>
+                                      <div class="chat-hour">{{date(meu.time)}} <span class="fa fa-check-circle"></span></div>
                                       <div class="chat-text" >{{meu.messuser}}</div>
                                       <div class="chat-avatar">
                                           <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">

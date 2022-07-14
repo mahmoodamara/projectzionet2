@@ -3,7 +3,7 @@
   }
   .cart_section{
     padding: 40px 0;
-    
+
   }
   button{
       border-radius: 20px;
@@ -25,3 +25,17 @@
   i{
       cursor: pointer;
   } */
+
+  *{
+    box-sizing: border-box;
+  }
+  .ht__bradcaump__area {
+    padding-bottom: 200px;
+    padding-top: 0px;
+  }
+  .bg-image--6 {
+    background-image: url(../../assets/images/letter-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }

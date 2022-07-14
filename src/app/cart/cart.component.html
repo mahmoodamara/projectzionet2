@@ -1,7 +1,7 @@
 <!-- <div class="yes">
     <app-navbar></app-navbar>
     <section class="cart_section" >
-      
+
       <div class="container">
       <table datatable class="row-border hover ">
         <thead>
@@ -10,8 +10,8 @@
             <th>Name</th>
             <th>Price</th>
             <th>Action</th>
-           
-           
+
+
         </thead>
         <tbody>
           <tr *ngFor="let i of carts " >
@@ -27,26 +27,28 @@
           <button>Check Out</button>
           <h2>Total : {{totalPrice() | currency:"ILS"}}</h2>
         </div>
-        
+
     </section>
     <br>
-    
+
     <app-footer></app-footer>
     </div> -->
-
+    <div class="ht__bradcaump__area bg-image--6" >
+      <app-navbar></app-navbar>
+    </div>
 <section class="h-100 gradient-custom">
     <div class="container py-5">
       <div class="row d-flex justify-content-center my-4">
         <div class="col-md-8">
           <div class="card mb-4">
             <div class="card-header py-3">
-              <h5 class="mb-0">Cart - 2 items</h5>
+              <h5 class="mb-0">MY CART</h5>
             </div>
             <div class="card-body" *ngFor="let cartItem of carts">
               <!-- Single item -->
               <div class="row">
                 <div class="col-lg-3 col-md-12 mb-4 mb-lg-0" >
-                    
+
                   <!-- Image -->
                   <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
                     <img [src]="cartItem.product.img"
@@ -57,7 +59,7 @@
                   </div>
                   <!-- Image -->
                 </div>
-  
+
                 <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
                   <!-- Data -->
                   <p><strong>{{cartItem.product.description}}</strong></p>
@@ -73,26 +75,26 @@
                   </button>
                   <!-- Data -->
                 </div>
-  
+
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-2">
                   <!-- Quantity -->
                   <div class="d-flex mb-4" style="max-width: 200px">
                     <button  (click)="decrease(cartItem.product.serialNumber)"  class="btn btn-dark" style="width: 58px; height: 40px; margin-right: 7px;">
                       <i class="fa fa-minus"></i>
                     </button>
-  
+
                     <div class="form-outline">
                       <input id="form1" min="0" name="quantity" value="{{cartItem.quantity}}" type="number" class="form-control" />
                       <label class="form-label" for="form1">Quantity</label>
                     </div>
-  
+
                     <button (click)="increase(cartItem.product.serialNumber)"    class="btn btn-dark" style="width: 58px; height: 40px; margin-left: 7px;">
-                    
+
                       <i class="fa fa-plus"></i>
                     </button>
                   </div>
                   <!-- Quantity -->
-  
+
                   <!-- Price -->
                   <p class="text-start text-md-center">
                     <strong>{{price(cartItem.product.serialNumber) | currency}}</strong>
@@ -138,11 +140,11 @@
                 <li
                   class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                   Products
-                  <span>$53.98</span>
+                  <span>{{totalPrice()| currency}}</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                   Shipping
-                  <span>Gratis</span>
+                  <span>12.99</span>
                 </li>
                 <li
                   class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
@@ -152,10 +154,10 @@
                       <p class="mb-0">(including VAT)</p>
                     </strong>
                   </div>
-                  <span><strong>{{totalPrice()| currency}}</strong></span>
+                  <span><strong>{{totalPriceAftersh()| currency}}</strong></span>
                 </li>
               </ul>
-  
+
               <button type="button" class="btn btn-dark btn-lg btn-block">
                 Go to checkout
               </button>
@@ -167,3 +169,4 @@
   </section>
   <br>        <br>
   <br>
+  <app-footer></app-footer>

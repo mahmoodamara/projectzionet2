@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 .ht__bradcaump__area {
-    padding-bottom: 380px;
+    padding-bottom: 100px;
     padding-top: 0px;
 }
 .bg-image--6 {
@@ -112,7 +112,7 @@ article, aside, details, figcaption, figure, footer, header, nav, section, summa
     position: relative;
     text-transform: uppercase;
     border-bottom: 1px solid rgb(46, 46, 46);
-   
+
 }
 h3, .h3, h4, .h4 {
     font-weight: 700;
@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, address, p, pre, blockquot
 }
 h1, h2, h3, h4, h5, h6 {
     clear: both;
-   
+
 }
 h3 {
     display: block;
@@ -272,7 +272,7 @@ button, input, select, textarea {
     max-width: 100%;
     vertical-align: baseline;
     margin: 0px;
-   
+
 }
 button, select {
     text-transform: none;
@@ -288,7 +288,7 @@ option {
     opacity: 1;
 }
 .fade {
-    
+
     transition: opacity 0.15s linear 0s;
 }
 .shop-grid .product {
@@ -356,7 +356,7 @@ a {
     background: transparent none repeat scroll 0 0;
     display: inline-block;
     padding: 20px 15px;
-    
+
 }
 .product .product__content {
     width: 100%;
@@ -385,7 +385,7 @@ a {
     margin-bottom: 8px;
     overflow: hidden;
     text-overflow: ellipsis;
-   
+
     white-space: nowrap;
 }
 .content--center .rating, .product.product__style--3 .product__content.content--center .prize {
@@ -407,64 +407,64 @@ a {
 .buttonclass{
     text-align: center;
     padding-top: 10px;
-   
+
 }
 
-.button {  
-    --background: #cb7a59;  
-    --text: #fff;  
-    --cart: #fff;  
-    --tick: var(--background);  
-    position: relative;  
-    border: none;  
-    background: none;  
-    padding: 8px 28px;  
-    border-radius: 8px;  
-    -webkit-appearance: none;  
-    -webkit-tap-highlight-color: transparent;  
-     
- 
-    cursor: pointer;  
-    text-align: center; 
-    outline: none; 
-    min-width: 144px;  
-    color: var(--text);  
-    background: var(--background);  
-    transform: scale(var(--scale, 1));  
-    transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.50);  
-   }  
-   .button:active {  
-    --scale: 0.95;  
-   }  
-   .button span {  
-    font-size: 14px;  
-    font-weight: 500;  
-    display: block;  
-    position: relative;  
-    padding-left: 24px;  
-    margin-left: -8px;  
-    line-height: 26px;  
-    transform: translateY(var(--span-y, 0));  
-    transition: transform 0.7s ease;  
-   }  
-   .button span:before, .button span:after {  
-    content: '';  
-    width: var(--w, 2px);  
-    height: var(--h, 14px);  
-    border-radius: 1px;  
-    position: absolute;  
-    left: var(--l, 8px);  
-    top: var(--t, 6px);  
-    background: currentColor;  
-    transform: scale(0.75) rotate(var(--icon-r, 0deg)) translateY(var(--icon-y, 0));  
-    transition: transform 0.65s ease 0.05s;  
-   }  
-   .button span:after {  
-    --w: 14px;  
-    --h: 2px;  
-    --l: 2px;  
-    --t: 12px;  
-   }  
+.button {
+    --background: #cb7a59;
+    --text: #fff;
+    --cart: #fff;
+    --tick: var(--background);
+    position: relative;
+    border: none;
+    background: none;
+    padding: 8px 28px;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    min-width: 144px;
+    color: var(--text);
+    background: var(--background);
+    transform: scale(var(--scale, 1));
+    transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.50);
+   }
+   .button:active {
+    --scale: 0.95;
+   }
+   .button span {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    margin-left: -8px;
+    line-height: 26px;
+    transform: translateY(var(--span-y, 0));
+    transition: transform 0.7s ease;
+   }
+   .button span:before, .button span:after {
+    content: '';
+    width: var(--w, 2px);
+    height: var(--h, 14px);
+    border-radius: 1px;
+    position: absolute;
+    left: var(--l, 8px);
+    top: var(--t, 6px);
+    background: currentColor;
+    transform: scale(0.75) rotate(var(--icon-r, 0deg)) translateY(var(--icon-y, 0));
+    transition: transform 0.65s ease 0.05s;
+   }
+   .button span:after {
+    --w: 14px;
+    --h: 2px;
+    --l: 2px;
+    --t: 12px;
+   }
 
 
    .whatsapp_float {
