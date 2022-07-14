@@ -50,12 +50,13 @@ export class ChatUserComponent implements OnInit {
   postMessage(){
     this.userMessages.userName= this.userActiv[0].username;
     this.userMessages.userEmail=this.userActiv[0].email;
-    this.userMessages.adminMessage='';
-
-     this.messageservice.PostMessage(this.userMessages).subscribe(res=>{
+     this.messageservice.PostMessageUser(this.userMessages).subscribe(res=>{
+      this.userMessages.messadmin = '';
        this.getMessages();
        this.getUserMessage();
+
      })
+
   }
 
 }

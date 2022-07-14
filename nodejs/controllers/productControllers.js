@@ -79,11 +79,7 @@ router.put('/products/:id', (req, res) => {
     sales:req.body.sales
 
   };
-  Product.findByIdAndUpdate(req.params.id, {
-    $set: product
-  }, {
-    new: true
-  }, (err, doc) => {
+  Product.findByIdAndUpdate(req.params.id, {$set: product}, {new: true}, (err, doc) => {
     if (!err) {
       res.send(doc);
     } else {

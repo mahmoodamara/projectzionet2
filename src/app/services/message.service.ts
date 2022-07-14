@@ -16,6 +16,7 @@ export class MessageService {
   getmessages(): Observable<any> {
     return this.http.get(this.baseURL + 'messages');
   }
+  email:string=localStorage.getItem('token');
 
   getUsers(): Observable<any> {
     return this.http.get(this.baseURL + 'messagesUsers');
@@ -30,10 +31,17 @@ export class MessageService {
     return this.http.get(this.baseUrlUser);
   }
 
-  PostMessage(message:Message){
-    return this.http.post<any>(this.baseURL+'messages',message,{
+  PostMessageUser(message:Message){
+    return this.http.post<any>(this.baseURL+'messagesUser',message,{
       headers: this.headers
     });
   }
+  PostMessageAdmin(message:Message){
+    return this.http.post<any>(this.baseURL+'messagesAdmin',message,{
+      headers: this.headers
+    });
+  }
+
+
 
 }

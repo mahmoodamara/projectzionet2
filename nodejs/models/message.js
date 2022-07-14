@@ -6,8 +6,10 @@ const mongoose = require('mongoose');
     adminName:{type:String},
     userName:{type:String},
     userEmail: {type:String},
-    adminMessage:{type: String},
-    userMessage:{type: String},
+    adminMessage:{type: Array},
+    userMessage:{type: Array},
+    messuser:{type:String},
+    messadmin:{type:String},
     time:{type:Date},
 });
 
