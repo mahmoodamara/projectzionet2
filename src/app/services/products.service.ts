@@ -49,6 +49,13 @@ export class ProductsService {
   }
 
 
+  get5mostsalesproducts(): Observable<any> {
+    return this.http.get(this.baseURL + '/productsSales');
+  }
+
+  get5mostcheapestproducts() : Observable<any>{
+    return this.http.get(this.baseURL + '/cheapestBooks');
+  }
 
 
 }

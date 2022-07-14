@@ -6,10 +6,10 @@ export class Product {
   category:string;
   description:string;
   img:string;
-  quantity:Number;
-  sales:Number;
+  quantity:number;
+  sales:number;
   
-  constructor( serialNumber:number,name:string,price:number,category:string,description:string,img:string,quantity:Number,sales:Number){
+  constructor( serialNumber:number,name:string,price:number,category:string,description:string,img:string,quantity:number){
     this.serialNumber=serialNumber;
     this.name=name;
     this.price=price;
@@ -17,7 +17,7 @@ export class Product {
     this.description=description;
     this.img=img;
     this.quantity=quantity;
-    this.sales=sales;
+    
   }
 }
 

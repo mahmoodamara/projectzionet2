@@ -92,15 +92,15 @@
 
         </div>
       </main>
-
+ 
     <section class="product">
-        <h2 class="product-category">best selling</h2>
+        <h2 class="product-category">-- best selling --</h2>
 
         <div class="product-container">
 
 
 
-            <div class="product-card" *ngFor="let product of products">
+            <div class="product-card" *ngFor="let product of most5salesproducts">
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img [src]="product.img" class="product-thumb" alt="">
@@ -118,17 +118,17 @@
         </div>
     </section>
     <section class="product">
-        <h2 class="product-category">best selling</h2>
+        <h2 class="product-category">-- Cheapest Products --</h2>
 
         <div class="product-container">
 
 
 
-            <div class="product-card" *ngFor="let product of products">
+            <div class="product-card" *ngFor="let product of most5cheapestproducts">
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img [src]="product.img" class="product-thumb" alt="">
-                    <button class="card-btn">Add to Cart</button>
+                    <button (click)="addToCart(product)" class="card-btn">Add to Cart</button>
                 </div>
                 <div class="product-info">
                     <h5 class="product-brand">{{product.name}}</h5>

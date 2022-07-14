@@ -115,6 +115,30 @@ router.route('/countMessages').get(function (req, res) {
   })
 })
 
+router.get('/productsSales', (req, res) => {
+  Product.find().sort({
+      sales: -1
+  }).limit(5).exec(function (err, docs) {
+      if (!err) {
+          res.send(docs);
+      } else {
+          console.log('Error in Retriving Users :' + JSON.stringify(err, undefined, 2));
+      }
+  });
+});
+
+router.get('/cheapestBooks', (req, res) => {
+  Product.find().sort({
+      price: 1
+  }).limit(5).exec(function (err, docs) {
+      if (!err) {
+          res.send(docs);
+      } else {
+          console.log('Error in Retriving Users :' + JSON.stringify(err, undefined, 2));
+      }
+  });
+});
+
 
 
 module.exports = router;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../models/message.mode';
 import { Product } from '../models/product.model';
+import { CartService } from '../services/cart.service';
 import { MessageService } from '../services/message.service';
 import { ProductsService } from '../services/products.service';
 import { UserserviceService } from '../services/userservice.service';
@@ -23,13 +24,15 @@ showmassege:boolean = false;
 
 
 
-  constructor(private userservice:UserserviceService, private messageservice:MessageService,private productservice : ProductsService) {
+  constructor(private userservice:UserserviceService, private messageservice:MessageService,private productservice : ProductsService , private cartservice:CartService) {
 
    }
 
   ngOnInit(): void {
     this.getUser();
     this.getProducts();
+    this.get5mostproducts();
+    this.get5mostcheapestproducts();
   }
 
   getUser(){
@@ -54,7 +57,8 @@ showmassege:boolean = false;
 
 
   products :Product[]=[];
-
+  most5salesproducts :Product[]=[];
+  most5cheapestproducts :Product[]=[];
 
 
 getProducts(){
@@ -62,4 +66,29 @@ getProducts(){
     this.products=res;
   })
 }
+
+
+addToCart(product:Product){
+  this.cartservice.addToCart(product).subscribe((res)=>{
+    alert("add sucss")
+    
+  });
+  product.quantity--;
+  product.sales++;
+  this.productservice.updateProduct(product).subscribe((res)=>{
+  });
+}
+
+get5mostproducts(){
+  this.productservice.get5mostsalesproducts().subscribe((res =>{
+this.most5salesproducts=res;
+  }));
+}
+
+get5mostcheapestproducts(){
+  this.productservice.get5mostcheapestproducts().subscribe((res =>{
+this.most5cheapestproducts=res;
+  }))
+}
+
 }

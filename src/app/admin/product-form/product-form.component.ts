@@ -15,8 +15,8 @@ export class ProductFormComponent implements OnInit {
   productForm:FormGroup;
   showErrorMessage: boolean=false;
   showSucssMessage: boolean=false;
-  productOne = new Product(0,"",0,"","","",0,0);
-  productOne2 = new Product(0,"",0,"","","",0,0);
+  productOne = new Product(0,"",0,"","","",0);
+  productOne2 = new Product(0,"",0,"","","",0);
   actiontime:number;
   image:string="assets/images/loginphoto.jpg"
 
