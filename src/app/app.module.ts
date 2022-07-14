@@ -26,6 +26,7 @@ import { BookCategoryComponent } from './book-category/book-category.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { VerificationComponent } from './verification/verification.component';
 import { SuccessPageComponent } from './success-page/success-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { SuccessPageComponent } from './success-page/success-page.component';
     ForgetPasswordComponent,
     VerificationComponent,
     SuccessPageComponent,
+    FooterComponent,
 
 
   ],
