@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { Product } from '../models/product.model';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-book-category',
@@ -8,6 +9,8 @@ import { Product } from '../models/product.model';
   styleUrls: ['./book-category.component.css']
 })
 export class BookCategoryComponent implements OnInit {
+
+  
   Animalcounter:number=0;
   horrorcounter:number=0;
   romancecounter:number=0;
@@ -17,7 +20,7 @@ export class BookCategoryComponent implements OnInit {
   countall:number=0;
 
   posts$ = this.productservice;
-  constructor(private productservice:ProductsService) { }
+  constructor(private productservice:ProductsService , private cartservice:CartService) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -93,6 +96,16 @@ export class BookCategoryComponent implements OnInit {
     })
 
     
+  }
+  addToCart(product:Product){
+    this.cartservice.addToCart(product).subscribe((res)=>{
+      alert("add sucss")
+      
+    });
+    product.quantity--;
+    product.sales++;
+    this.productservice.updateProduct(product).subscribe((res)=>{
+    });
   }
   
 

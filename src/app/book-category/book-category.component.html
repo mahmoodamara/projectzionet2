@@ -4,6 +4,7 @@
 
 </div>
 
+
 <div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
     <div class="container">
         <div class="row">
@@ -85,18 +86,16 @@
                             <div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12" *ngFor="let product of productbycategory">
                                 <div class="product__thumb">
                                     <a class="first__img" href="single-product.html"><img [src]="product.img" alt=""></a>
-                                    <div class="hot__box">
-                                        <span class="hot-label">BEST SALLER</span>
-                                    </div>
+                                 
                                 </div>
                                 <div class="buttonclass"><button class="button">  
-                                    <span>Add to cart</span>  </button></div>
+                                    <span (click)="addToCart(product)">Add to cart</span>  </button></div>
                                     <div class="cart">  </div>
                                 <div class="product__content content--center">
                                     <h4><a href="single-product.html">{{product.name}}</a></h4>
                                     <ul class="prize d-flex">
-                                        <li>{{product.price}}</li>
-                                        <li class="old_prize">$35.00</li>
+                                        <li>${{product.price}}</li>
+                                      
                                     </ul>
    
 
@@ -114,4 +113,5 @@
         </div>
     </div>
 </div>
+
 <app-footer></app-footer>

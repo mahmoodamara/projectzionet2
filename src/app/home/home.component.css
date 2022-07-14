@@ -29,97 +29,18 @@
   .content h1 {
 	font-size: 70px;
 	margin-top: 80px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
-  .content p {
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #009688;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+  
 
-
-  }
-
-  .login-btn {
-	width: 200px;
-	padding: 15px 0;
-	text-align: center;
-	margin: 20px 10px;
-	border-radius: 25px;
-	font-weight: bold;
-	border: 2px solid #009688;
-	background: transparent;
-	color: white;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
-  }
-
-  .signup-btn {
-	width: 200px;
-	padding: 15px 0;
-	text-align: center;
-	margin: 20px 10px;
-	border-radius: 25px;
-	font-weight: bold;
-	border: 2px solid #009688;
-	background: transparent;
-	color: white;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
-  }
-
-  .chat-btn{
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #009688;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    animation-name: example;
-    animation-duration: 2s;
-    animation-delay: 2s;
-  }
   @keyframes example {
-    0%   {background-color:#009688; left:0px; top:0px;}
-    100%  {background-color:#009688; left:5px; top:0px;}
+    0%   {background-color:rgb(229, 146, 133); left:0px; top:0px;}
+    100%  {background-color:rgb(229, 146, 133); left:5px; top:0px;}
 
   }
 
-  .cover {
-	background: #009688;
-	height: 100%;
-	width: 0%;
-	border-radius: 25px;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	z-index: -1;
-	transition: 0.8s;
-  }
-
-  button:hover span {
-	width: 100%;
-  }
-
-  button:hover {
-	border: none;
-  }
+ 
 
   /* PRODUCTS */
   .product {
@@ -216,7 +137,7 @@
   }
 
   .product-brand {
-	text-transform: uppercase;
+	font-size: medium;
   }
 
   .product-short-description {
@@ -296,27 +217,9 @@
 	position: relative;
   }
 
-  .collection img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-  }
+ 
 
-  .collection p {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	color: #fff;
-	font-size: 50px;
-	text-transform: capitalize;
-  }
-
-  .collection:nth-child(3) {
-	grid-column: span 2;
-	margin-bottom: 10px;
-  }
+ 
 
 .modal .modal-dialog .modal-content .modal-body .popup-outer{
   display: flex;
@@ -334,16 +237,11 @@
 
 
 .fade{
-
-
-
   width: 100%;
 	top: 50%;
 	transform: translateY(-50%);
 	text-align: center;
   margin-left: 480px;
-
-
 
 }
 @media (max-width: 980px) {
@@ -354,7 +252,6 @@
   }
 }
 
-
 /* for desktop */
 .whatsapp_float {
 	position:fixed;
@@ -362,7 +259,7 @@
 	height:60px;
 	bottom:40px;
 	right:40px;
-	background-color:#25d366;
+	background-color:rgb(229, 146, 133);
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;

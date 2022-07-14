@@ -15,13 +15,8 @@
         <app-navbar></app-navbar>
         <div class="content">
             <h1>So many books, so little time</h1>
-            <div>
-                <button class="signup-btn" type="button"><span class="cover"></span>SIGN UP</button>
-                <button class="login-btn" type="button"><span class="cover"></span>LOG IN</button>
-            </div>
-            <div>
-              <button  class="chat-btn" data-toggle="modal" data-target="#UPDATE"><span class="cover" ></span>chat </button>
-          </div>
+
+    
         </div>
         <div class="modal fade" id="UPDATE" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -38,7 +33,7 @@
                   <p>chat to admin</p>
                 </div>
                 <div class="alert alert-primary" role="alert" *ngIf="showmassege">
-                  This is a primary alert—check it out!
+                  Send successfuly
                 </div>
                 <div class="input-message">
                 <input type="text" [(ngModel)]="userMessages.userMessage">
@@ -94,7 +89,7 @@
       </main>
  
     <section class="product">
-        <h2 class="product-category">-- best selling --</h2>
+        <h2 class="product-category">-- best selling & 50% off --</h2>
 
         <div class="product-container">
 
@@ -102,31 +97,9 @@
 
             <div class="product-card" *ngFor="let product of most5salesproducts">
                 <div class="product-image">
+              
                     <span class="discount-tag">50% off</span>
-                    <img [src]="product.img" class="product-thumb" alt="">
-                    <button class="card-btn">Add to Cart</button>
-                </div>
-                <div class="product-info">
-                    <h5 class="product-brand">{{product.name}}</h5>
-                    <p class="product-short-description">{{product.description}}</p>
-                    <span class="price">${{product.price/2}}</span><span class="actual-price">{{product.price}}</span>
-                </div>
-            </div>
-
-            <button class="pre-btn" appPrev></button>
-            <button class="nxt-btn" appNext></button>
-        </div>
-    </section>
-    <section class="product">
-        <h2 class="product-category">-- Cheapest Products --</h2>
-
-        <div class="product-container">
-
-
-
-            <div class="product-card" *ngFor="let product of most5cheapestproducts">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
+                    
                     <img [src]="product.img" class="product-thumb" alt="">
                     <button (click)="addToCart(product)" class="card-btn">Add to Cart</button>
                 </div>
@@ -141,8 +114,32 @@
             <button class="nxt-btn" appNext></button>
         </div>
     </section>
+    <hr class="my-5" />
+    <section class="product">
+        <h2 class="product-category">-- Cheapest Books --</h2>
+
+        <div class="product-container">
+
+
+
+            <div class="product-card" *ngFor="let product of most5cheapestproducts">
+                <div class="product-image">
+                    <img [src]="product.img" class="product-thumb" alt="">
+                    <button (click)="addToCart(product)" class="card-btn">Add to Cart</button>
+                </div>
+                <div class="product-info">
+                    <h5 class="product-brand">{{product.name}}</h5>
+                    <p class="product-short-description">{{product.description | slice: 0:50}}</p>
+                    <span class="price">${{product.price}}</span>
+                </div>
+            </div>
+
+            <button class="pre-btn" appPrev></button>
+            <button class="nxt-btn" appNext></button>
+        </div>
+    </section>
   
-    <a href="https://wa.me/country_code_and_your_phone_number" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+    <a data-toggle="modal" data-target="#UPDATE" href="https://wa.me/country_code_and_your_phone_number" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
 </body>
 </html>
